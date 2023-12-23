@@ -76,21 +76,13 @@ clsClient clsClient::Find(string AccountNumber) {
 
 
 clsClient clsClient::Find(string AccountNumber,string PinCode) {
-	fstream ClientsFile;
-	string ClientLine = "";
-	ClientsFile.open(ClientFileName, ios::in);
-	if (ClientsFile.is_open())
-	{
-		while (getline(ClientsFile, ClientLine))
-		{
-			clsClient  Client = _ConvertClientLineToClientObject(ClientLine);
-			if (Client.account_number == AccountNumber && Client.pin_code==PinCode)
-			{
-				ClientsFile.close();
-				return Client;
-			}
-		}
-	}
+
+	clsClient Client = Find(AccountNumber);
+	
+	if (Client.pin_code == PinCode && !Client.IsEmplty()) {
+		return Client;
+	} 
+
 	return _GetEmptyClientObject();
 }
 
