@@ -307,12 +307,9 @@ public:
     {
         return CountVowels(_Value);
     }
-
     static vector<string> Split(string S1, string Delim)
     {
-
         vector<string> vString;
-
         short pos = 0;
         string sWord; // define a string variable  
 
@@ -320,11 +317,7 @@ public:
         while ((pos = S1.find(Delim)) != std::string::npos)
         {
             sWord = S1.substr(0, pos); // store the word   
-            if (sWord != "")
-            {
-                vString.push_back(sWord);
-            }
-
+            vString.push_back(sWord);
             S1.erase(0, pos + Delim.length());  /* erase() until positon and move to next word. */
         }
 

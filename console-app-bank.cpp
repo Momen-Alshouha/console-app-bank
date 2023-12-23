@@ -5,11 +5,13 @@
 #include "clsPeriod.h"
 #include "clsString.h"
 #include "clsUtil.h"
+#include "clsClient.h"
+
 using namespace std;
 
 int main()
 {
-
-    std::cout << "Hello World!\n";
-
+	clsClient Client = clsClient::Find("A101");
+	Client.Print();
+	cout << clsClient::IsClientExisits("123123") << endl;
 }

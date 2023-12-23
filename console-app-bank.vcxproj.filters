@@ -18,6 +18,12 @@
     <ClCompile Include="console-app-bank.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="clsPerson.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clsClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clsString.h">
@@ -33,6 +39,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="clsPeriod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsPerson.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsClient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
