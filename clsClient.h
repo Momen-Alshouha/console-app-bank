@@ -66,4 +66,6 @@ public:
 
 	bool Delete();
 
+	static vector<clsClient> GetClientsList();
+
 };

@@ -215,6 +215,7 @@ clsClient clsClient::GetAddNewClientObject(string AccountNumber)
 {
 	return clsClient(AddMode, "", "", "", "", AccountNumber, "", 0);
 }
+
 bool clsClient::Delete()
 {
 	vector<clsClient> vClients = _LoadClientsDataFromFile();
@@ -222,4 +223,9 @@ bool clsClient::Delete()
 	_SaveClienstDataToFile(vClients);
 	*this = _GetEmptyClientObject();
 	return true;
+}
+
+vector<clsClient> clsClient::GetClientsList()
+{
+	return _LoadClientsDataFromFile();
 };
