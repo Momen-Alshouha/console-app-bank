@@ -6,7 +6,7 @@
 
 const string clsClient::ClientFileName = "Clients.txt";
 
-string clsClient::_ConvertClientObjectToLine(clsClient Client,string Line, string Delimeter)
+string clsClient::_ConvertClientObjectToLine(clsClient Client,string Line, string Delimeter = "#//#")
 {
 	string ClientLine = "";
 	ClientLine += Client.firstname+ Delimeter;
@@ -19,7 +19,7 @@ string clsClient::_ConvertClientObjectToLine(clsClient Client,string Line, strin
 	return ClientLine;
 }
 
-clsClient clsClient::_ConvertClientLineToClientObject(string Line,string Delimeter)
+clsClient clsClient::_ConvertClientLineToClientObject(string Line,string Delimeter = "#//#")
 {
 	vector<string> vData = clsString::Split(Line, Delimeter);
 	return clsClient(UpdateMode, vData[0], vData[1], vData[2], vData[3], vData[4], vData[5], stof(vData[6]));
@@ -28,6 +28,39 @@ clsClient clsClient::_ConvertClientLineToClientObject(string Line,string Delimet
 clsClient clsClient::_GetEmptyClientObject()
 {
 	return clsClient(EmptyMode, "", "", "", "", "", "", 0);
+}
+
+void clsClient::_SaveClienstDataToFile(vector<clsClient> vClients)
+{
+	string ClientLine = "";
+	fstream ClientsFile;
+	ClientsFile.open(ClientFileName, ios::out);
+	if (ClientsFile.is_open())
+	{
+		for (clsClient &C : vClients) {
+			ClientLine = clsClient::_ConvertClientObjectToLine(C, "#//#");
+			ClientsFile << ClientLine << endl;
+		}
+		ClientsFile.close();
+	}
+}
+
+vector<clsClient> clsClient::_LoadClientsDataFromFile()
+{
+	fstream ClientsFile;
+	string ClientLine;
+	vector<clsClient> vClients;
+	ClientsFile.open(ClientFileName, ios::in);
+	if (ClientsFile.is_open())
+	{
+		while (getline(ClientsFile,ClientLine))
+		{
+			clsClient Client = _ConvertClientLineToClientObject(ClientLine);
+			vClients.push_back(Client);
+		}
+		ClientsFile.close();
+	}
+	return vClients;
 }
 
 clsClient::clsClient(enMode Mode, string FirstName, string LastName, string Email, string Phone, string AccountNumber, string PinCode, float Balance)

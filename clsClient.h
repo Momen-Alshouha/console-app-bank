@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include "clsPerson.h"
 
 class clsClient : public clsPerson
@@ -10,11 +11,16 @@ class clsClient : public clsPerson
 	float _Balance;
 	enMode _Mode=EmptyMode;
 	
-	static string _ConvertClientObjectToLine(clsClient Client,string Line,string Delimeter="#//#");
+	static string _ConvertClientObjectToLine(clsClient Client,string Line,string Delimeter);
 
-	static clsClient _ConvertClientLineToClientObject(string Line, string Delimeter = "#//#");
+	static clsClient _ConvertClientLineToClientObject(string Line, string Delimeter );
 
 	static clsClient _GetEmptyClientObject();
+
+	static void _SaveClienstDataToFile(vector<clsClient> vClients);
+
+	static vector<clsClient> _LoadClientsDataFromFile();
+
 
 public:
 	
