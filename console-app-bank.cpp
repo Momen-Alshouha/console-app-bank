@@ -193,7 +193,23 @@ void ShowTotalBalances()
 	cout << "\t\t\t\t\t   ( " << clsUtil::NumberToText(TotalBalances) << ")\n\n";
 }
 
+void DeleteAllClients() {
+	string AreYouSure = "";
+	cout << "Are You Sure Do You Want To Delete All Clients ? ";
+	cin >> AreYouSure;
+	if (tolower(AreYouSure[0])=='y')
+	{
+		if (clsClient::DeleteAll())
+		{
+			cout << "\nAll Clietnts Deleted Successfully!\n";
+		}
+		else {
+			cout << "\nThank You\n";
+		}
+	}
+}
+
 int main()
 {
-	ShowTotalBalances();
+	DeleteAllClients();
 }

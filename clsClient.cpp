@@ -108,6 +108,14 @@ void clsClient::_MarkClientForDelete(vector<clsClient>& vClients, string Account
 	}
 }
 
+void clsClient::_MarkAllClientsForDelete(vector<clsClient>& vClients)
+{
+	for (auto& C : vClients)
+	{
+		C.markForDeletion = true;
+	}
+}
+
 float clsClient::_GetTotalBalances(vector<clsClient> vClients)
 {
 	float Total = 0;
@@ -246,4 +254,12 @@ double clsClient::GetTotalBalances()
 	vector<clsClient> vClients=_LoadClientsDataFromFile();
 	TotalBalances = _GetTotalBalances(vClients);
 	return TotalBalances;
-};
+}
+bool clsClient::DeleteAll()
+{
+	vector<clsClient> vClietns = _LoadClientsDataFromFile();
+	_MarkAllClientsForDelete(vClietns);
+	_SaveClienstDataToFile(vClietns);
+	return true;
+}
+;

@@ -29,6 +29,8 @@ class clsClient : public clsPerson
 
 	void _MarkClientForDelete(vector<clsClient>& vClients, string AccountNumber);
 
+	static void _MarkAllClientsForDelete(vector<clsClient>& vClients);
+
 	static float _GetTotalBalances(vector<clsClient> vClients);
 
 public:
@@ -72,5 +74,5 @@ public:
 
 	static double GetTotalBalances();
 
-
+	static bool DeleteAll();
 };
