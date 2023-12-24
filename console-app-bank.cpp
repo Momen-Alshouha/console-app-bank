@@ -14,4 +14,5 @@ int main()
 	clsClient Client = clsClient::Find("A101");
 	Client.Print();
 	cout << clsClient::IsClientExisits("123123") << endl;
+
 }

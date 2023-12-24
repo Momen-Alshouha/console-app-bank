@@ -26,14 +26,6 @@ public:
 
 	}
 
-	static bool IsNumberBetween(float Number, float From, float To)
-	{
-		if (Number >= From && Number <= To)
-			return true;
-		else
-			return false;
-	}
-
 	static bool IsNumberBetween(double Number, double From, double To)
 	{
 		if (Number >= From && Number <= To)
@@ -88,6 +80,28 @@ public:
 		return Number;
 	}
 
+	static double ReadFloatNumber(string ErrorMessage = "Invalid Number, Enter again\n")
+	{
+		float Number;
+		while (!(cin >> Number)) {
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cout << ErrorMessage;
+		}
+		return Number;
+	}
+
+	static double ReadFloatNumberBetween(double From, double To, string ErrorMessage = "Number is not within range, Enter again:\n")
+	{
+		float Number = ReadFloatNumber();
+
+		while (!IsNumberBetween(Number, From, To)) {
+			cout << ErrorMessage;
+			Number = ReadDblNumber();
+		}
+		return Number;
+	}
+
 	static double ReadDblNumber(string ErrorMessage = "Invalid Number, Enter again\n")
 	{
 		double Number;
@@ -115,5 +129,11 @@ public:
 		return	clsDate::IsValidDate(Date);
 	}
 
+	static string ReadString()
+	{
+		string  S1 = "";
+		// Usage of std::ws will extract allthe whitespace character
+		getline(cin >> ws, S1);
+		return S1;
+	}
 };
-
