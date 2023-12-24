@@ -43,6 +43,16 @@ void clsPerson::SetPhone(string Phone)
 	_Phone = Phone;
 }
 
+bool clsPerson::GetMarkForDeletion()
+{
+	return _MarkForDeletion;
+}
+
+void clsPerson::SetMarkForDeletion(bool Mark)
+{
+	_MarkForDeletion = Mark;
+}
+
 string clsPerson::GetFullName()
 {
 	return _FirstName + " " + _LastName;

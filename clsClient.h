@@ -4,7 +4,7 @@
 
 class clsClient : public clsPerson
 {
-	enum enMode { EmptyMode = 0, UpdateMode };
+	enum enMode { EmptyMode = 0, UpdateMode ,AddMode };
 	const static string ClientFileName;
 
 	string _AccountNumber, _PinCode;
@@ -17,17 +17,23 @@ class clsClient : public clsPerson
 
 	static clsClient _GetEmptyClientObject();
 
-	static void _SaveClienstDataToFile(vector<clsClient> vClients);
+	static void _SaveClienstDataToFile(vector<clsClient> &vClients);
 
 	static vector<clsClient> _LoadClientsDataFromFile();
 
+	void _AddClientDataToFile(string ClientLine);
+
 	void _Update();
+
+	void _Add();
+
+	void _MarkClientForDelete(vector<clsClient>& vClients, string AccountNumber);
 
 public:
 	
 	enum enSaveResult
 	{
-		svSuccess = 0, svFailed
+		svSuccess = 0, svFailed, svClientExist
 	};
 
 	clsClient(enMode Mode, string FirstName, string LastName, string Email, string Phone, string AccountNumber,string _PinCode, float Balance);
@@ -55,4 +61,9 @@ public:
 	void Print();
 
 	enSaveResult Save();
+
+	static clsClient GetAddNewClientObject(string AccountNumber);
+
+	bool Delete();
+
 };

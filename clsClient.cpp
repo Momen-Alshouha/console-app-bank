@@ -31,7 +31,7 @@ clsClient clsClient::_GetEmptyClientObject()
 	return clsClient(EmptyMode, "", "", "", "", "", "", 0);
 }
 
-void clsClient::_SaveClienstDataToFile(vector<clsClient> vClients)
+void clsClient::_SaveClienstDataToFile(vector<clsClient> &vClients)
 {
 	string ClientLine = "";
 	fstream ClientsFile;
@@ -40,7 +40,10 @@ void clsClient::_SaveClienstDataToFile(vector<clsClient> vClients)
 	{
 		for (clsClient &C : vClients) {
 			ClientLine = clsClient::_ConvertClientObjectToLine(C, "#//#");
-			ClientsFile << ClientLine << endl;
+			if (!C.markForDeletion)
+			{
+				ClientsFile << ClientLine << endl;
+			}
 		}
 		ClientsFile.close();
 	}
@@ -64,6 +67,17 @@ vector<clsClient> clsClient::_LoadClientsDataFromFile()
 	return vClients;
 }
 
+void clsClient::_AddClientDataToFile(string ClientLine)
+{
+	fstream ClientFile;
+	ClientFile.open(ClientFileName, ios::app);
+	if (ClientFile.is_open())
+	{
+		ClientFile << ClientLine << endl;
+		ClientFile.close();
+	}
+}
+
 void clsClient::_Update()
 {
 	vector<clsClient> vClients;
@@ -75,6 +89,23 @@ void clsClient::_Update()
 		}
 	}
 	_SaveClienstDataToFile(vClients);
+}
+
+void clsClient::_Add()
+{
+	_AddClientDataToFile(_ConvertClientObjectToLine(*this, "#//#"));
+}
+
+void clsClient::_MarkClientForDelete(vector<clsClient>& vClients, string AccountNumber)
+{
+	for (auto& C : vClients)
+	{
+		if (C.account_number==AccountNumber)
+		{
+			C.markForDeletion = true;
+			break;
+		}
+	}
 }
 
 clsClient::clsClient(enMode Mode, string FirstName, string LastName, string Email, string Phone, string AccountNumber, string PinCode, float Balance)
@@ -172,7 +203,23 @@ clsClient::enSaveResult clsClient::Save()
 		_Update();
 		return svSuccess;
 		break;
+	case clsClient::AddMode:
+		_Add();
+		return clsClient::svSuccess;
 	default:
 		break;
 	}
+}
+
+clsClient clsClient::GetAddNewClientObject(string AccountNumber)
+{
+	return clsClient(AddMode, "", "", "", "", AccountNumber, "", 0);
+}
+bool clsClient::Delete()
+{
+	vector<clsClient> vClients = _LoadClientsDataFromFile();
+	_MarkClientForDelete(vClients, this->account_number);
+	_SaveClienstDataToFile(vClients);
+	*this = _GetEmptyClientObject();
+	return true;
 };

@@ -5,6 +5,7 @@ using namespace std;
 class clsPerson
 {
 	string _FirstName, _LastName, _Email, _Phone;
+	bool _MarkForDeletion = false;
 
 public:
 	
@@ -22,6 +23,9 @@ public:
 	string GetPhone();
 	void SetPhone(string Phone);
 
+	bool GetMarkForDeletion();
+	void SetMarkForDeletion(bool Mark);
+
 	string GetFullName();
 
 	// properities
@@ -30,6 +34,7 @@ public:
 	__declspec(property (get = GetFirstName)) string fullname; // read only
 	__declspec(property (get = GetEmail, put = SetEmail)) string email;
 	__declspec(property (get = GetPhone, put = SetPhone)) string phone;
+	__declspec(property (get = GetMarkForDeletion, put = SetMarkForDeletion)) bool markForDeletion;
 
 	virtual void Print() = 0;
 
