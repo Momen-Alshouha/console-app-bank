@@ -6,6 +6,7 @@
 
 const string clsClient::ClientFileName = "Clients.txt";
 
+
 string clsClient::_ConvertClientObjectToLine(clsClient Client,string Line, string Delimeter = "#//#")
 {
 	string ClientLine = "";
@@ -61,6 +62,19 @@ vector<clsClient> clsClient::_LoadClientsDataFromFile()
 		ClientsFile.close();
 	}
 	return vClients;
+}
+
+void clsClient::_Update()
+{
+	vector<clsClient> vClients;
+	vClients = clsClient::_LoadClientsDataFromFile();
+	for (clsClient &C:vClients) {
+		if (C.account_number == account_number)
+		{
+			C = *this; break;
+		}
+	}
+	_SaveClienstDataToFile(vClients);
 }
 
 clsClient::clsClient(enMode Mode, string FirstName, string LastName, string Email, string Phone, string AccountNumber, string PinCode, float Balance)
@@ -145,4 +159,20 @@ void clsClient::Print()
 		cout << "\nBalance     : " << balance;
 		cout << "\n___________________\n";
 }
-;
+
+
+clsClient::enSaveResult clsClient::Save()
+{
+	switch (_Mode)
+	{
+	case clsClient::EmptyMode:
+		return svFailed;
+		break;
+	case clsClient::UpdateMode:
+		_Update();
+		return svSuccess;
+		break;
+	default:
+		break;
+	}
+};

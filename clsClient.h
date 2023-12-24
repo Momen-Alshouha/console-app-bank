@@ -21,9 +21,15 @@ class clsClient : public clsPerson
 
 	static vector<clsClient> _LoadClientsDataFromFile();
 
+	void _Update();
 
 public:
 	
+	enum enSaveResult
+	{
+		svSuccess = 0, svFailed
+	};
+
 	clsClient(enMode Mode, string FirstName, string LastName, string Email, string Phone, string AccountNumber,string _PinCode, float Balance);
 	string GetAccountNumber();
 	
@@ -35,8 +41,8 @@ public:
 
 	// properities
 	__declspec(property(get = GetAccountNumber)) string account_number; // read only
-	__declspec(property(get = GetBalance, put=SetBalance)) float balance; // read only
-	__declspec(property(get = GetPinCode, put = SetPinCode)) string pin_code; // read only
+	__declspec(property(get = GetBalance, put=SetBalance)) float balance; 
+	__declspec(property(get = GetPinCode, put = SetPinCode)) string pin_code; 
 
 	static clsClient Find(string AccountNumber);
 
@@ -47,4 +53,6 @@ public:
 	static bool IsClientExisits(string AccountNumber);
 
 	void Print();
+
+	enSaveResult Save();
 };
