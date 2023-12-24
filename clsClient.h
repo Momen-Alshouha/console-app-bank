@@ -29,6 +29,8 @@ class clsClient : public clsPerson
 
 	void _MarkClientForDelete(vector<clsClient>& vClients, string AccountNumber);
 
+	static float _GetTotalBalances(vector<clsClient> vClients);
+
 public:
 	
 	enum enSaveResult
@@ -67,5 +69,8 @@ public:
 	bool Delete();
 
 	static vector<clsClient> GetClientsList();
+
+	static double GetTotalBalances();
+
 
 };

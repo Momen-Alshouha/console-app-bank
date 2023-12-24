@@ -108,6 +108,16 @@ void clsClient::_MarkClientForDelete(vector<clsClient>& vClients, string Account
 	}
 }
 
+float clsClient::_GetTotalBalances(vector<clsClient> vClients)
+{
+	float Total = 0;
+	for (auto& C : vClients)
+	{
+		Total += C.balance;
+	}
+	return Total;
+}
+
 clsClient::clsClient(enMode Mode, string FirstName, string LastName, string Email, string Phone, string AccountNumber, string PinCode, float Balance)
 	:clsPerson(FirstName, LastName, Email, Phone), _AccountNumber(AccountNumber), _PinCode(PinCode), _Balance(Balance),_Mode(Mode) {}
 
@@ -228,4 +238,12 @@ bool clsClient::Delete()
 vector<clsClient> clsClient::GetClientsList()
 {
 	return _LoadClientsDataFromFile();
+}
+
+double clsClient::GetTotalBalances()
+{
+	double TotalBalances = 0;
+	vector<clsClient> vClients=_LoadClientsDataFromFile();
+	TotalBalances = _GetTotalBalances(vClients);
+	return TotalBalances;
 };
