@@ -104,7 +104,6 @@ void DeleteClient() {
 	}
 }
 
-
 void PrintClientRecordLine(clsClient Client)
 {
 

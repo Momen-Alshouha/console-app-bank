@@ -241,5 +241,34 @@ public:
 
     }
 
+
+    string NumberToText(int Num) {
+        string StrNum = "";
+        string StrNums[]{ "","One","Two","Three","Four","Five","Six"
+            ,"Seven","Eight","Nine","Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen","Twenty" };
+
+        string StrTens[] = { "","","Twenty","Thirty","Fourty","Fifty","Sixty","Seventy","Eighty","Ninty" };
+
+        if (Num <= 20)
+        {
+            return StrNums[Num];
+        }
+        else if (Num < 100) {
+            return StrTens[Num / 10] + " " + NumberToText(Num % 10);
+        }
+        else if (Num < 1000) {
+            return StrNums[Num / 100] + " Hundred " + NumberToText(Num % 100);
+        }
+        else if (Num < 1000000) { 
+            return NumberToText(Num / 1000) + " Thousand " + NumberToText(Num % 1000);
+        }
+        else if (Num < 1000000000) {
+            return NumberToText(Num / 1000000) + " Million " + NumberToText(Num % 1000000);
+        }
+        else if (Num < 1000000000000) { 
+            return NumberToText(Num / 1000000000) + " Billion " + NumberToText(Num % 1000000000);
+        }
+    }
+
 };
 
