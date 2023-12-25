@@ -1,7 +1,7 @@
 #include "clsClientListScreen.h"
 
 
-void clsClientListScreen::PrintClientRecordLine(clsClient Client)
+void clsClientListScreen::_PrintClientRecordLine(clsClient Client)
 {
 	cout << "| " << setw(15) << left << Client.account_number;
 	cout << "| " << setw(20) << left << Client.fullname;
@@ -35,7 +35,7 @@ void clsClientListScreen::ShowClientsList()
 
 		for (clsClient& Client : vClients)
 		{
-			PrintClientRecordLine(Client);
+			_PrintClientRecordLine(Client);
 			cout << endl;
 		}
 

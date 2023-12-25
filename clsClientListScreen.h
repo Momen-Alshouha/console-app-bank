@@ -5,9 +5,9 @@
 
 class clsClientListScreen : public clsScreen
 {
-
+	static void _PrintClientRecordLine(clsClient Client);
 public:
-	static void PrintClientRecordLine(clsClient Client);
+	
 	static void ShowClientsList();
 
 
