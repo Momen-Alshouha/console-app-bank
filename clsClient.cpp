@@ -244,6 +244,10 @@ double clsClient::GetTotalBalances()
 bool clsClient::DeleteAll()
 {
 	vector<clsClient> vClietns = _LoadClientsDataFromFile();
+	if (vClietns.size()==0)
+	{
+		return false;
+	}
 	_MarkAllClientsForDelete(vClietns);
 	_SaveClienstDataToFile(vClietns);
 	return true;

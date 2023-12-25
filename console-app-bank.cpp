@@ -23,60 +23,6 @@ void ReadClientInfo(clsClient &Client) {
 	Client.balance = clsInputValidate::ReadFloatNumber();
 }
 
-void UpdateClient() {
-	string AccountNumber = clsInputValidate::ReadString("Enter Account Number : ");
-	
-	while (!clsClient::IsClientExisits(AccountNumber))
-	{
-		cout << "Client Not Found.\n";
-		AccountNumber = clsInputValidate::ReadString("Enter Account Number : ");
-	}
-
-	clsClient Client = clsClient::Find(AccountNumber);
-	system("cls");
-	clsScreen::PrintClient(Client);
-	cout << "Update Client info : \n";
-	ReadClientInfo(Client);
-	clsClient::enSaveResult SaveResult;
-	SaveResult = Client.Save();
-	switch (SaveResult)
-	{
-	case clsClient::svSuccess:
-		cout << "\nAccount Updated Successfully!\n";
-		clsScreen::PrintClient(Client);
-		break;
-	case clsClient::svFailed:
-		cout << "Error! Not Saved!\n";
-		break;
-	default:
-		break;
-	}
-}
-
-void DeleteClient() {
-	string AreYouSure;
-	string AccountNumber = clsInputValidate::ReadString("Enter Account Number : ");
-	while (!clsClient::IsClientExisits(AccountNumber))
-	{
-		cout << "Client Does Not Exist.\n";
-		AccountNumber = clsInputValidate::ReadString("Enter Account Number : ");
-	}
-
-	clsClient Client = clsClient::Find(AccountNumber);
-	clsScreen::PrintClient(Client);
-	cout << "Are You Sure Do You Want To Delete This Client ? ";
-	cin >> AreYouSure;
-	if (tolower(AreYouSure[0])=='y')
-	{
-		if (Client.Delete())
-		{
-			cout << "Client Deleted Successfully\n";
-		}
-	}
-	else {
-		cout << "\nThank You!\n";
-	}
-}
 
 void PrintClientRecordBalanceLine(clsClient Client)
 {
@@ -119,22 +65,6 @@ void ShowTotalBalances()
 	cout << "_________________________________________\n" << endl;
 	cout << "\t\t\t\t\t   Total Balances = " << TotalBalances << endl;
 	cout << "\t\t\t\t\t   ( " << clsUtil::NumberToText(TotalBalances) << ")\n\n";
-}
-
-void DeleteAllClients() {
-	string AreYouSure = "";
-	cout << "Are You Sure Do You Want To Delete All Clients ? ";
-	cin >> AreYouSure;
-	if (tolower(AreYouSure[0])=='y')
-	{
-		if (clsClient::DeleteAll())
-		{
-			cout << "\nAll Clietnts Deleted Successfully!\n";
-		}
-		else {
-			cout << "\nThank You\n";
-		}
-	}
 }
 
 int main()

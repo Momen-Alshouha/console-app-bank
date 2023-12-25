@@ -12,20 +12,22 @@ void clsMainMenu::_ShowAddNewClientsScreen()
 
 void clsMainMenu::_ShowDeleteClientScreen()
 {
-    cout << "\nDelete Client Screen Will be here...\n";
+    clsDeleteScreen::DeleteClient();
+}
 
+void clsMainMenu::_ShowDeleteAllClientsScreen()
+{
+    clsDeleteScreen::DeleteAllClients();
 }
 
 void clsMainMenu::_ShowUpdateClientScreen()
 {
-    cout << "\nUpdate Client Screen Will be here...\n";
-
+    clsUpdateClientScreen::UpdateClient();
 }
 
 void clsMainMenu::_ShowFindClientScreen()
 {
-    cout << "\nFind Client Screen Will be here...\n";
-
+    clsFindClientScreen::FindClientScreen();
 }
 
  void clsMainMenu::_ShowTransactionsMenue()
@@ -63,6 +65,10 @@ void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
         _ShowDeleteClientScreen();
         _GoBackToMainMenu();
         break;
+    case clsMainMenu::eDeleteAllClients:
+        _ShowDeleteAllClientsScreen();
+        _GoBackToMainMenu();
+        break;
     case clsMainMenu::eUpdateClient:
         _ShowUpdateClientScreen();
         _GoBackToMainMenu();
@@ -89,8 +95,8 @@ void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
 
 int clsMainMenu::_ReadMainMenueOption()
 {
-    cout << "Enter Option [1-8] : ";
-    return clsInputValidate::ReadIntNumberBetween(1, 8);
+    cout << "Enter Option [1-9] : ";
+    return clsInputValidate::ReadIntNumberBetween(1, 9);
 }
 
 void clsMainMenu::_GoBackToMainMenu()
@@ -107,11 +113,12 @@ void clsMainMenu::ShowMainMenu()
     cout  << "\t[1] Show Client List.\n";
     cout  << "\t[2] Add New Client.\n";
     cout  << "\t[3] Delete Client.\n";
-    cout  << "\t[4] Update Client Info.\n";
-    cout << "\t[5] Find Client.\n";
-    cout  << "\t[6] Transactions.\n";
-    cout << "\t[7] Manage Users.\n";
-    cout <<"\t[8] Logout.\n";
+    cout << "\t[4] Delete All Clients.\n";
+    cout  << "\t[5] Update Client Info.\n";
+    cout << "\t[6] Find Client.\n";
+    cout  << "\t[7] Transactions.\n";
+    cout << "\t[8] Manage Users.\n";
+    cout <<"\t[9] Logout.\n";
     cout << "====================================\n";
 
     _PerfromMainMenuOption((enMainMenuOption)_ReadMainMenueOption());
