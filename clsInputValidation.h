@@ -57,7 +57,7 @@ public:
 		return false;
 	}
 
-	static int ReadIntNumber(string ErrorMessage = "Invalid Number, Enter again\n")
+	static int ReadIntNumber(string ErrorMessage = "Invalid Number, Enter again:\n")
 	{
 		int Number;
 		while (!(cin >> Number)) {

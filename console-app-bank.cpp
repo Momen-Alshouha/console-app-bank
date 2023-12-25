@@ -6,6 +6,7 @@
 #include "clsString.h"
 #include "clsUtil.h"
 #include "clsClient.h"
+#include "clsMainMenu.h"
 #include <iomanip>
 using namespace std;
 
@@ -211,5 +212,5 @@ void DeleteAllClients() {
 
 int main()
 {
-	DeleteAllClients();
+	clsMainMenu::ShowMainMenu();
 }
