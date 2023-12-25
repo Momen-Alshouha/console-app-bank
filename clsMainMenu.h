@@ -2,6 +2,7 @@
 #include "clsInputValidation.h"
 #include "clsScreen.h"
 #include "clsClientListScreen.h"
+#include "clsAddClientScreen.h"
 
 class clsMainMenu : protected clsScreen
 {

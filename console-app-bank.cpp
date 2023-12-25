@@ -8,6 +8,8 @@
 #include "clsClient.h"
 #include "clsMainMenu.h"
 #include <iomanip>
+#include "clsScreen.h"
+
 using namespace std;
 
 
@@ -32,7 +34,7 @@ void UpdateClient() {
 
 	clsClient Client = clsClient::Find(AccountNumber);
 	system("cls");
-	Client.Print();
+	clsScreen::PrintClient(Client);
 	cout << "Update Client info : \n";
 	ReadClientInfo(Client);
 	clsClient::enSaveResult SaveResult;
@@ -41,39 +43,10 @@ void UpdateClient() {
 	{
 	case clsClient::svSuccess:
 		cout << "\nAccount Updated Successfully!\n";
-		Client.Print();
+		clsScreen::PrintClient(Client);
 		break;
 	case clsClient::svFailed:
 		cout << "Error! Not Saved!\n";
-		break;
-	default:
-		break;
-	}
-}
-
-void AddClient() {
-	cout << "Add New Client : \n";
-	string AccountNumber = clsInputValidate::ReadString("Enter Account Number : ");
-	bool IsClientExisit = clsClient::IsClientExisits(AccountNumber);
-	while (IsClientExisit)
-	{
-		cout << "Account Number Is Already Taken! Enter Another one.\n";
-		AccountNumber = clsInputValidate::ReadString("Enter Account Number : ");
-		IsClientExisit = clsClient::IsClientExisits(AccountNumber);
-	}
-
-	clsClient NewClient = clsClient::GetAddNewClientObject(AccountNumber);
-	ReadClientInfo(NewClient);
-	clsClient::enSaveResult SaveResult = NewClient.Save();
-	system("cls");
-	switch (SaveResult)
-	{
-	case clsClient::svSuccess:
-		cout << "Client Added Successfully.\n";
-		NewClient.Print();
-		break;
-	case clsClient::svFailed:
-		cout << "\nError Save!\n";
 		break;
 	default:
 		break;
@@ -90,7 +63,7 @@ void DeleteClient() {
 	}
 
 	clsClient Client = clsClient::Find(AccountNumber);
-	Client.Print();
+	clsScreen::PrintClient(Client);
 	cout << "Are You Sure Do You Want To Delete This Client ? ";
 	cin >> AreYouSure;
 	if (tolower(AreYouSure[0])=='y')

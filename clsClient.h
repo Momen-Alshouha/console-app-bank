@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "clsPerson.h"
+#include "clsInputValidation.h"
 
 class clsClient : public clsPerson
 {
@@ -62,8 +63,6 @@ public:
 
 	static bool IsClientExisits(string AccountNumber);
 
-	void Print();
-
 	enSaveResult Save();
 
 	static clsClient GetAddNewClientObject(string AccountNumber);
@@ -75,4 +74,6 @@ public:
 	static double GetTotalBalances();
 
 	static bool DeleteAll();
+
+	
 };

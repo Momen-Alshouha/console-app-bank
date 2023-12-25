@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="clsAddClientScreen.cpp" />
     <ClCompile Include="clsClient.cpp" />
     <ClCompile Include="clsClientListScreen.cpp" />
     <ClCompile Include="clsMainMenu.cpp" />
@@ -135,6 +136,7 @@
     <ClCompile Include="console-app-bank.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="clsAddClientScreen.h" />
     <ClInclude Include="clsClient.h" />
     <ClInclude Include="clsClientListScreen.h" />
     <ClInclude Include="clsDate.h" />

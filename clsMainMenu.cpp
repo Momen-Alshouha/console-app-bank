@@ -1,7 +1,4 @@
 #include "clsMainMenu.h"
-#include <iostream>
-#include <iomanip>
-using namespace std;
 
 void clsMainMenu::_ShowAllClientsScreen()
 {
@@ -10,8 +7,7 @@ void clsMainMenu::_ShowAllClientsScreen()
 
 void clsMainMenu::_ShowAddNewClientsScreen()
 {
-    cout << "\nAdd New Client Screen Will be here...\n";
-
+    clsAddClientScreen::AddClient();
 }
 
 void clsMainMenu::_ShowDeleteClientScreen()

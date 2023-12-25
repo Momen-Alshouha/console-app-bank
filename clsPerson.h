@@ -36,7 +36,5 @@ public:
 	__declspec(property (get = GetPhone, put = SetPhone)) string phone;
 	__declspec(property (get = GetMarkForDeletion, put = SetMarkForDeletion)) bool markForDeletion;
 
-	virtual void Print() = 0;
-
 };
 

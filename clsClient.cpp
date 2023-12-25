@@ -194,20 +194,6 @@ bool clsClient::IsClientExisits(string AccountNumber)
 	
 }
 
-void clsClient::Print()
-{
-		cout << "\nClient Card:";
-		cout << "\n___________________";
-		cout << "\nFirstName   : " << firstname;
-		cout << "\nLastName    : " << lastname;
-		cout << "\nFull Name   : " << fullname;
-		cout << "\nEmail       : " << email;
-		cout << "\nPhone       : " << phone;
-		cout << "\nAcc. Number : " << account_number;
-		cout << "\nPassword    : " << pin_code;
-		cout << "\nBalance     : " << balance;
-		cout << "\n___________________\n";
-}
 
 
 clsClient::enSaveResult clsClient::Save()
@@ -262,4 +248,3 @@ bool clsClient::DeleteAll()
 	_SaveClienstDataToFile(vClietns);
 	return true;
 }
-;
