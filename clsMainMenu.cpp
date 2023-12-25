@@ -99,7 +99,7 @@ int clsMainMenu::_ReadMainMenueOption()
 
 void clsMainMenu::_GoBackToMainMenu()
 {
-    cout << "\npress any key to back to main menu\n";
+    cout << "\nPress any key to back to main menu...\n";
     system("pause>0");
     ShowMainMenu();
 }
