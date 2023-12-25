@@ -5,8 +5,7 @@ using namespace std;
 
 void clsMainMenu::_ShowAllClientsScreen()
 {
-    cout << "\nClient List Screen Will be here...\n";
-
+    clsClientListScreen::ShowClientsList();
 }
 
 void clsMainMenu::_ShowAddNewClientsScreen()

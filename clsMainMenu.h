@@ -1,6 +1,7 @@
 #pragma once
 #include "clsInputValidation.h"
 #include "clsScreen.h"
+#include "clsClientListScreen.h"
 
 class clsMainMenu : protected clsScreen
 {

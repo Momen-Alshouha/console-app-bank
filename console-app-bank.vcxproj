@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="clsClient.cpp" />
+    <ClCompile Include="clsClientListScreen.cpp" />
     <ClCompile Include="clsMainMenu.cpp" />
     <ClCompile Include="clsPerson.cpp" />
     <ClCompile Include="clsScreen.cpp" />
@@ -135,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clsClient.h" />
+    <ClInclude Include="clsClientListScreen.h" />
     <ClInclude Include="clsDate.h" />
     <ClInclude Include="clsInputValidation.h" />
     <ClInclude Include="clsMainMenu.h" />
