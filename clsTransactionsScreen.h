@@ -1,5 +1,6 @@
 #pragma once
 #include "clsScreen.h"
+#include "clsTotalBalancesScreen.h"
 #include "clsMainMenu.h"
 
 class clsTransactionsScreen : public clsScreen

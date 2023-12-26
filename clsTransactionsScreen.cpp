@@ -20,7 +20,7 @@ void clsTransactionsScreen::_PerformTransactionMenuOption(enTransactionMenuOptio
         _GoBackToTransactionMenu();
         break;
     case clsTransactionsScreen::enTotalBalances:
-        cout << "Total Balances\n";
+        clsTotalBalancesScreen::ShowTotalBalances();
         _GoBackToTransactionMenu();
         break;
     case clsTransactionsScreen::enMainMenu:

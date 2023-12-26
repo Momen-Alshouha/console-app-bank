@@ -1,5 +1,12 @@
 #include "clsFindClientScreen.h"
 
+void clsFindClientScreen::PrintClientRecordBalanceLine(clsClient Client)
+{
+	cout << "| " << setw(15) << left << Client.account_number;
+	cout << "| " << setw(40) << left << Client.fullname;
+	cout << "| " << setw(12) << left << Client.balance;
+}
+
 void clsFindClientScreen::FindClientScreen()
 {
 	clsScreen::_DrawScreenHeader("Find Client Screen");
