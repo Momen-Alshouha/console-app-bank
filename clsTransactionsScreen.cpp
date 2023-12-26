@@ -13,15 +13,15 @@ void clsTransactionsScreen::_PerformTransactionMenuOption(enTransactionMenuOptio
     {
     case clsTransactionsScreen::enDeposite:
         cout << "Deposite\n";
-        _GoBackToMainMenu();
+        _GoBackToTransactionMenu();
         break;
     case clsTransactionsScreen::enWithdraw:
         cout << "Withdraw\n";
-        _GoBackToMainMenu();
+        _GoBackToTransactionMenu();
         break;
     case clsTransactionsScreen::enTotalBalances:
         cout << "Total Balances\n";
-        _GoBackToMainMenu();
+        _GoBackToTransactionMenu();
         break;
     case clsTransactionsScreen::enMainMenu:
         clsMainMenu::ShowMainMenu();
@@ -31,11 +31,11 @@ void clsTransactionsScreen::_PerformTransactionMenuOption(enTransactionMenuOptio
     }
 }
 
-void clsTransactionsScreen::_GoBackToMainMenu()
+void clsTransactionsScreen::_GoBackToTransactionMenu()
 {
-    cout << "\nPress any key to back to main menu...\n";
+    cout << "\nPress any key to back to transactions menu ...\n";
     system("pause>0");
-    clsMainMenu::ShowMainMenu();
+    ShowTransactionScreen();
 }
 
 void clsTransactionsScreen::ShowTransactionScreen()

@@ -13,7 +13,7 @@ class clsTransactionsScreen : public clsScreen
 
 	static void _PerformTransactionMenuOption(enTransactionMenuOption Option);
 
-	static void _GoBackToMainMenu();
+	static void _GoBackToTransactionMenu();
 
 public:
 	static void ShowTransactionScreen();
