@@ -32,8 +32,7 @@ void clsMainMenu::_ShowFindClientScreen()
 
  void clsMainMenu::_ShowTransactionsMenue()
 {
-    cout << "\nTransactions Menue Will be here...\n";
-
+     clsTransactionsScreen::ShowTransactionScreen();
 }
 
 void clsMainMenu::_ShowManageUsersMenue()

@@ -135,6 +135,7 @@
     <ClCompile Include="clsMainMenu.cpp" />
     <ClCompile Include="clsPerson.cpp" />
     <ClCompile Include="clsScreen.cpp" />
+    <ClCompile Include="clsTransactionsScreen.cpp" />
     <ClCompile Include="clsUpdateClientScreen.cpp" />
     <ClCompile Include="console-app-bank.cpp" />
   </ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="clsPerson.h" />
     <ClInclude Include="clsScreen.h" />
     <ClInclude Include="clsString.h" />
+    <ClInclude Include="clsTransactionsScreen.h" />
     <ClInclude Include="clsUpdateClientScreen.h" />
     <ClInclude Include="clsUtil.h" />
   </ItemGroup>

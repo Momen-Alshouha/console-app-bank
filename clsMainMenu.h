@@ -6,6 +6,7 @@
 #include "clsDeleteScreen.h"
 #include "clsUpdateClientScreen.h"
 #include "clsFindClientScreen.h"
+#include "clsTransactionsScreen.h"
 
 class clsMainMenu : protected clsScreen
 {

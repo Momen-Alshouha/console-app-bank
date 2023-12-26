@@ -12,18 +12,6 @@
 
 using namespace std;
 
-
-void ReadClientInfo(clsClient &Client) {
-	Client.firstname = clsInputValidate::ReadString("Enter First Name : ");
-	Client.lastname= clsInputValidate::ReadString("Enter Last Name : ");
-	Client.email = clsInputValidate::ReadString("Enter Email : ");	
-	Client.phone = clsInputValidate::ReadString("Enter Phone : ");
-	Client.pin_code= clsInputValidate::ReadString("Enter Pin Code : ");
-	cout << "Enter Balance : ";
-	Client.balance = clsInputValidate::ReadFloatNumber();
-}
-
-
 void PrintClientRecordBalanceLine(clsClient Client)
 {
 
@@ -32,7 +20,6 @@ void PrintClientRecordBalanceLine(clsClient Client)
 	cout << "| " << setw(12) << left << Client.balance;
 
 }
-
 
 void ShowTotalBalances()
 {
@@ -70,5 +57,4 @@ void ShowTotalBalances()
 int main()
 {
 	clsMainMenu::ShowMainMenu();
-	
 }
