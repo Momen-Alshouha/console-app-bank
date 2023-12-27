@@ -37,7 +37,8 @@ void clsMainMenu::_ShowFindClientScreen()
 
 void clsMainMenu::_ShowManageUsersMenu()
 {
-    cout << "\nUsers Menue Will be here...\n";
+    //cout << "\nUsers Menue Will be here...\n";
+    clsManageUsers::ShowManageUsersScreen();
 
 }
 

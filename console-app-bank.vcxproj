@@ -134,6 +134,7 @@
     <ClCompile Include="clsDepositeScreen.cpp" />
     <ClCompile Include="clsFindClientScreen.cpp" />
     <ClCompile Include="clsMainMenu.cpp" />
+    <ClCompile Include="clsManageUsers.cpp" />
     <ClCompile Include="clsPerson.cpp" />
     <ClCompile Include="clsScreen.cpp" />
     <ClCompile Include="clsTotalBalancesScreen.cpp" />
@@ -152,6 +153,7 @@
     <ClInclude Include="clsFindClientScreen.h" />
     <ClInclude Include="clsInputValidation.h" />
     <ClInclude Include="clsMainMenu.h" />
+    <ClInclude Include="clsManageUsers.h" />
     <ClInclude Include="clsPeriod.h" />
     <ClInclude Include="clsPerson.h" />
     <ClInclude Include="clsScreen.h" />
