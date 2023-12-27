@@ -77,11 +77,11 @@ void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
         _GoBackToMainMenu();
         break;
     case clsMainMenu::eShowTransactionsMenue:
-        _ShowTransactionsMenue();
+        _ShowTransactionsMenu();
         _GoBackToMainMenu();
         break;
     case clsMainMenu::eManageUsers:
-        _ShowManageUsersMenue();
+        _ShowManageUsersMenu();
         _GoBackToMainMenu();
         break;
     case clsMainMenu::eExit:
