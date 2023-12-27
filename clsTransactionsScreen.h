@@ -22,6 +22,8 @@ class clsTransactionsScreen : public clsScreen
 
 	static void _ShowWithdrawScreen();
 
+	static void _ShowTotalBalancesScreen();
+
 public:
 	static void ShowTransactionScreen();
 

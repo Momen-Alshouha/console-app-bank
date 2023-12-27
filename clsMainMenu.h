@@ -29,9 +29,9 @@ class clsMainMenu : protected clsScreen
 
 	static void _ShowFindClientScreen();
 
-	static void _ShowTransactionsMenue();
+	static void _ShowTransactionsMenu();
 
-	static void _ShowManageUsersMenue();
+	static void _ShowManageUsersMenu();
 
 	static void _ShowEndScreen();
 

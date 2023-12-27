@@ -30,12 +30,12 @@ void clsMainMenu::_ShowFindClientScreen()
     clsFindClientScreen::FindClientScreen();
 }
 
- void clsMainMenu::_ShowTransactionsMenue()
+ void clsMainMenu::_ShowTransactionsMenu()
 {
      clsTransactionsScreen::ShowTransactionScreen();
 }
 
-void clsMainMenu::_ShowManageUsersMenue()
+void clsMainMenu::_ShowManageUsersMenu()
 {
     cout << "\nUsers Menue Will be here...\n";
 

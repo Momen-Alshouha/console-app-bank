@@ -16,11 +16,11 @@ void clsTransactionsScreen::_PerformTransactionMenuOption(enTransactionMenuOptio
         _GoBackToTransactionMenu();
         break;
     case clsTransactionsScreen::enWithdraw:
-        clsWithdrawScreen::ShowWithdrawScreen();
+        _ShowWithdrawScreen();
         _GoBackToTransactionMenu();
         break;
     case clsTransactionsScreen::enTotalBalances:
-        clsTotalBalancesScreen::ShowTotalBalances();
+        _ShowTotalBalancesScreen();
         _GoBackToTransactionMenu();
         break;
     case clsTransactionsScreen::enMainMenu:
@@ -46,6 +46,11 @@ void clsTransactionsScreen::_ShowDepositeScreen()
 void clsTransactionsScreen::_ShowWithdrawScreen()
 {
     clsWithdrawScreen::ShowWithdrawScreen();
+}
+
+void clsTransactionsScreen::_ShowTotalBalancesScreen()
+{
+    clsTotalBalancesScreen::ShowTotalBalances();
 }
 
 void clsTransactionsScreen::ShowTransactionScreen()
