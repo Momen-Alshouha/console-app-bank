@@ -7,6 +7,7 @@
 #include "clsUtil.h"
 #include "clsClient.h"
 #include "clsInputValidation.h"
+#include "clsDate.h"
 
 using namespace std;
 

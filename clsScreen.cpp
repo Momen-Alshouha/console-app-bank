@@ -37,8 +37,8 @@ void clsScreen::_DrawScreenHeader(string Title, string SubTitle)
 {
     clsDate Date;
     cout << "=================================================";
-    cout << "\n   " << Title<<"     Date : "; 
-    clsScreen::PrintSystemDate(Date);
+    cout << "\n  " << Title<<" | "; 
+	clsDate::PrintTodayAndTime();
     if (SubTitle != "")
     {
         cout << "\n\t" << SubTitle;
