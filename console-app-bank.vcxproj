@@ -131,6 +131,7 @@
     <ClCompile Include="clsClient.cpp" />
     <ClCompile Include="clsClientListScreen.cpp" />
     <ClCompile Include="clsDeleteScreen.cpp" />
+    <ClCompile Include="clsDepositeScreen.cpp" />
     <ClCompile Include="clsFindClientScreen.cpp" />
     <ClCompile Include="clsMainMenu.cpp" />
     <ClCompile Include="clsPerson.cpp" />
@@ -138,6 +139,7 @@
     <ClCompile Include="clsTotalBalancesScreen.cpp" />
     <ClCompile Include="clsTransactionsScreen.cpp" />
     <ClCompile Include="clsUpdateClientScreen.cpp" />
+    <ClCompile Include="clsWithdrawScreen.cpp" />
     <ClCompile Include="console-app-bank.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +148,7 @@
     <ClInclude Include="clsClientListScreen.h" />
     <ClInclude Include="clsDate.h" />
     <ClInclude Include="clsDeleteScreen.h" />
+    <ClInclude Include="clsDepositeScreen.h" />
     <ClInclude Include="clsFindClientScreen.h" />
     <ClInclude Include="clsInputValidation.h" />
     <ClInclude Include="clsMainMenu.h" />
@@ -157,6 +160,11 @@
     <ClInclude Include="clsTransactionsScreen.h" />
     <ClInclude Include="clsUpdateClientScreen.h" />
     <ClInclude Include="clsUtil.h" />
+    <ClInclude Include="clsWithdrawScreen.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="console-app-bank.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -31,7 +31,7 @@ public:
 	// properities
 	__declspec(property (get = GetFirstName, put = SetFirstName)) string firstname;
 	__declspec(property (get = GetLastName, put = SetLastName)) string lastname;
-	__declspec(property (get = GetFirstName)) string fullname; // read only
+	__declspec(property (get = GetFullName)) string fullname; // read only
 	__declspec(property (get = GetEmail, put = SetEmail)) string email;
 	__declspec(property (get = GetPhone, put = SetPhone)) string phone;
 	__declspec(property (get = GetMarkForDeletion, put = SetMarkForDeletion)) bool markForDeletion;

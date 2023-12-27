@@ -2,6 +2,8 @@
 #include "clsScreen.h"
 #include "clsTotalBalancesScreen.h"
 #include "clsMainMenu.h"
+#include "clsDepositeScreen.h"
+#include "clsWithdrawScreen.h"
 
 class clsTransactionsScreen : public clsScreen
 {
@@ -15,6 +17,10 @@ class clsTransactionsScreen : public clsScreen
 	static void _PerformTransactionMenuOption(enTransactionMenuOption Option);
 
 	static void _GoBackToTransactionMenu();
+
+	static void _ShowDepositeScreen();
+
+	static void _ShowWithdrawScreen();
 
 public:
 	static void ShowTransactionScreen();

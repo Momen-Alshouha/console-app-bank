@@ -252,3 +252,15 @@ bool clsClient::DeleteAll()
 	_SaveClienstDataToFile(vClietns);
 	return true;
 }
+
+void clsClient::Deposite(float amount)
+{
+	this->balance += amount;
+	Save();
+}
+
+void clsClient::Withdraw(float amount)
+{
+	this->balance -= amount;
+	Save();
+}

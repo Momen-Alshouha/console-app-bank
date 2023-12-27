@@ -12,11 +12,11 @@ void clsTransactionsScreen::_PerformTransactionMenuOption(enTransactionMenuOptio
     switch (Option)
     {
     case clsTransactionsScreen::enDeposite:
-        cout << "Deposite\n";
+        _ShowDepositeScreen();
         _GoBackToTransactionMenu();
         break;
     case clsTransactionsScreen::enWithdraw:
-        cout << "Withdraw\n";
+        clsWithdrawScreen::ShowWithdrawScreen();
         _GoBackToTransactionMenu();
         break;
     case clsTransactionsScreen::enTotalBalances:
@@ -36,6 +36,16 @@ void clsTransactionsScreen::_GoBackToTransactionMenu()
     cout << "\nPress any key to back to transactions menu ...\n";
     system("pause>0");
     ShowTransactionScreen();
+}
+
+void clsTransactionsScreen::_ShowDepositeScreen()
+{
+    clsDepositeScreen::ShowDepositeScreen();
+}
+
+void clsTransactionsScreen::_ShowWithdrawScreen()
+{
+    clsWithdrawScreen::ShowWithdrawScreen();
 }
 
 void clsTransactionsScreen::ShowTransactionScreen()

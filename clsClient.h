@@ -75,5 +75,8 @@ public:
 
 	static bool DeleteAll();
 
+	void Deposite(float amount);
+
+	void Withdraw(float amount);
 	
 };

@@ -8,7 +8,7 @@ void clsClientListScreen::_PrintClientRecordLine(clsClient Client)
 	cout << "| " << setw(12) << left << Client.phone;
 	cout << "| " << setw(20) << left << Client.email;
 	cout << "| " << setw(10) << left << Client.pin_code;
-	cout << "| " << setw(12) << left << Client.account_number;
+	cout << "| " << setw(12) << left << Client.balance;
 }
 
 
