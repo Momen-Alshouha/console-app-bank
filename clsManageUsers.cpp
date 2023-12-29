@@ -48,6 +48,7 @@ void clsManageUsers::_AddUser()
 void clsManageUsers::_UpdateUser()
 {
     _DrawScreenHeader("Update User");
+    clsUpdateUserScreen::UpdateUser();
 }
 
 void clsManageUsers::_DeleteUser()

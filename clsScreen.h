@@ -31,7 +31,9 @@ public:
 	
 	static void PrintClient(clsClient& client);
 
-	static void PrintUser(clsUser& User);
+	static void PrintUserCard(clsUser& User);
+
+	static void PrintUserRecord(clsUser& User);
 
 
 };

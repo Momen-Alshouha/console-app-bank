@@ -19,7 +19,7 @@ public:
 		}
 		else {
 			clsUser UserToDelete = clsUser::Find(Username);
-			PrintUser(UserToDelete);
+			PrintUserCard(UserToDelete);
 			cout << "\nAre You Sure Do You Want To Delete This User (y,n) ? ";
 			cin >> AreYouSure;
 			if (tolower(AreYouSure[0]) == 'y')

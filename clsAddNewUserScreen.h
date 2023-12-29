@@ -30,7 +30,7 @@ public:
         case  clsUser::enSaveResults::svSucceeded:
         {
             cout << "\nUser Addeded Successfully :-)\n";
-           PrintUser(NewUser);
+           PrintUserCard(NewUser);
             break;
         }
         case clsUser::enSaveResults::svFaildEmptyObject:

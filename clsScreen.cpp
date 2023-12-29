@@ -18,11 +18,11 @@ void clsScreen::ReadClientInfo(clsClient& Client)
 }
 
 void clsScreen::ReadUserInfo(clsUser& User) {
-	User.firstname = clsInputValidate::ReadString("Enter First Name : ");
-	User.lastname = clsInputValidate::ReadString("Enter Last Name : ");
-	User.email = clsInputValidate::ReadString("Enter Email : ");
-	User.phone = clsInputValidate::ReadString("Enter Phone Number : ");
-	User.Password= clsInputValidate::ReadString("Enter Password : ");
+	User.firstname = clsInputValidate::ReadString("\nEnter First Name : ");
+	User.lastname = clsInputValidate::ReadString("\nEnter Last Name : ");
+	User.email = clsInputValidate::ReadString("\nEnter Email : ");
+	User.phone = clsInputValidate::ReadString("\nEnter Phone Number : ");
+	User.Password= clsInputValidate::ReadString("\nEnter Password : ");
 	cout << "\nEnter Permission: ";
 	User.Permissions= _ReadPermissionsToSet();
 }
@@ -30,11 +30,11 @@ void clsScreen::ReadUserInfo(clsUser& User) {
 int clsScreen::_ReadPermissionsToSet() {
     
     int Permissions = 0;
-    char Answer = 'n';
+    string Answer = "n";
 
     cout << "\nDo you want to give full access? y/n? ";
     cin >> Answer;
-    if (Answer == 'y' || Answer == 'Y')
+    if (tolower(Answer[0]) == 'y')
     {
         return -1;
     }
@@ -43,7 +43,7 @@ int clsScreen::_ReadPermissionsToSet() {
 
     cout << "\nShow Client List? y/n? ";
     cin >> Answer;
-    if (Answer == 'y' || Answer == 'Y')
+    if (tolower(Answer[0]) == 'y')
     {
 
 
@@ -51,43 +51,43 @@ int clsScreen::_ReadPermissionsToSet() {
     }
 
     cout << "\nAdd New Client? y/n? ";
-    cin >> Answer;
-    if (Answer == 'y' || Answer == 'Y')
+    cin >>ws>> Answer;
+    if (tolower(Answer[0]) == 'y')
     {
         Permissions += clsUser::enPermissions::pAddNewClient;
     }
 
     cout << "\nDelete Client? y/n? ";
     cin >> Answer;
-    if (Answer == 'y' || Answer == 'Y')
+    if (tolower(Answer[0]) == 'y')
     {
         Permissions += clsUser::enPermissions::pDeleteClient;
     }
 
     cout << "\nUpdate Client? y/n? ";
     cin >> Answer;
-    if (Answer == 'y' || Answer == 'Y')
+    if (tolower(Answer[0]) == 'y')
     {
         Permissions += clsUser::enPermissions::pUpdateClients;
     }
 
     cout << "\nFind Client? y/n? ";
     cin >> Answer;
-    if (Answer == 'y' || Answer == 'Y')
+    if (tolower(Answer[0]) == 'y')
     {
         Permissions += clsUser::enPermissions::pFindClient;
     }
 
     cout << "\nTransactions? y/n? ";
     cin >> Answer;
-    if (Answer == 'y' || Answer == 'Y')
+    if (tolower(Answer[0]) == 'y')
     {
         Permissions += clsUser::enPermissions::pTranactions;
     }
 
     cout << "\nManage Users? y/n? ";
     cin >> Answer;
-    if (Answer == 'y' || Answer == 'Y')
+    if (tolower(Answer[0]) == 'y')
     {
         Permissions += clsUser::enPermissions::pManageUsers;
     }
@@ -110,13 +110,26 @@ void clsScreen::PrintClient(clsClient& client)
 	cout << "\n___________________\n";
 }
 
-void clsScreen::PrintUser(clsUser& User) {
-	cout << "| " << setw(22) << left << User.fullname;
-	cout << "| " << setw(20) << left << User.phone;
-	cout << "| " << setw(17) << left << User.email;
-	cout << "| " << setw(12) << left << User.UserName;
-	cout << "| " << setw(12) << left << User.Password;
-	cout << "| " << setw(10) << left << User.Permissions;
+void clsScreen::PrintUserCard(clsUser& User) {
+
+    cout << "\nUser Card:";
+    cout << "\n___________________";
+    cout << "\nFull Name   : " << User.fullname;
+    cout << "\nPhone       : " << User.phone;
+    cout << "\nEmail       : " << User.email;
+    cout << "\nUsername    : " << User.UserName;
+    cout << "\nPassword    : " << User.Password;
+    cout << "\nPermissions : " << User.Permissions;
+    cout << "\n___________________\n";
+}
+
+void clsScreen::PrintUserRecord(clsUser& User) {
+    cout << "| " << left << setw(22) << User.fullname;
+    cout << "| " << left << setw(20) << User.phone;
+    cout << "| " << left << setw(17) << User.email;
+    cout << "| " << left << setw(12) << User.UserName;
+    cout << "| " << left << setw(12) << User.Password;
+    cout << "| " << left << setw(12) << User.Permissions;
 }
 
 void clsScreen::_DrawScreenHeader(string Title, string SubTitle)

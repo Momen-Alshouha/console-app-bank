@@ -31,7 +31,7 @@ public:
 
 			for (clsUser& User : vUsers)
 			{
-				PrintUser(User);
+				PrintUserRecord(User);
 				cout << endl;
 			}
 
