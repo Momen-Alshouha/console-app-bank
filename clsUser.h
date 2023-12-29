@@ -11,7 +11,7 @@ class clsUser : public clsPerson
 {
 private:
 
-    enum enMode { EmptyMode = 0, UpdateMode = 1, AddNewMode = 2 };
+    enum enMode { EmptyMode, UpdateMode , AddNewMode };
     enMode _Mode;
     string _UserName;
     string _Password;

@@ -36,7 +36,7 @@ void clsManageUsers::_PerformManageUsersMenuOption(enManageUsersMenuOption Optio
 void clsManageUsers::_ListUsers()
 {
     _DrawScreenHeader("List Users");
-    cout << "List Users\n";
+    clsListUsersScreen::ListUsers();
 }
 
 void clsManageUsers::_AddUser()

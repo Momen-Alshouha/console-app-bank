@@ -1,6 +1,7 @@
 #pragma once
 #include "clsScreen.h"
 #include "clsMainMenu.h"
+#include "clsListUsersScreen.h"
 
 class clsManageUsers : public clsScreen
 {
