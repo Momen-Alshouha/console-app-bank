@@ -60,6 +60,9 @@ void clsManageUsers::_DeleteUser()
 void clsManageUsers::_FindUser()
 {
     _DrawScreenHeader("Find User");
+    
+    clsFindUserScreen::FindUser();
+
 }
 
 void clsManageUsers::_GoBackToManageUsersMenu()

@@ -5,6 +5,7 @@
 #include "clsAddNewUserScreen.h"
 #include "clsDeleteUser.h"
 #include "clsUpdateUserScreen.h"
+#include "clsFindUserScreen.h"
 
 class clsManageUsers : public clsScreen
 {
