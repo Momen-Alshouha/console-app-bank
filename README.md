@@ -11,3 +11,10 @@ This repository contains a console-based banking application written in C++, emp
   - Create, Read, Update, Delete user data
   - Permission-based operations
   - User login and authentication
+
+## Admin Access
+
+The application includes an admin user with default credentials for testing purposes:
+
+- **Username**: admin_user
+- **Password**: admin_password123
