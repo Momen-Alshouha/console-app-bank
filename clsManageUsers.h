@@ -3,6 +3,7 @@
 #include "clsMainMenu.h"
 #include "clsListUsersScreen.h"
 #include "clsAddNewUserScreen.h"
+#include "clsDeleteUser.h"
 
 class clsManageUsers : public clsScreen
 {

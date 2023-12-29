@@ -53,6 +53,7 @@ void clsManageUsers::_UpdateUser()
 void clsManageUsers::_DeleteUser()
 {
     _DrawScreenHeader("Delete User");
+    clsDeleteUser::DeleteUser();
 }
 
 void clsManageUsers::_FindUser()
