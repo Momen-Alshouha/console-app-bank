@@ -499,6 +499,18 @@ public:
         _Value = RemovePunctuations(_Value);
     }
 
+    void StringToLower(string& str) {
+        for (int i = 0; i < str.length()-1; i++)
+        {
+            str[i] = tolower(str[i]);
+        }
+    }
 
+    void StringToUpper(string& str) {
+        for (int i = 0; i < str.length() - 1; i++)
+        {
+            str[i] = toupper(str[i]);
+        }
+    }
 };
 
