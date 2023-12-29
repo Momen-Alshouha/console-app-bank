@@ -30,7 +30,7 @@ public:
 					cout << "\nUser Deleted Successfully!\nThank You!\n";
 				}
 				else {
-					cout << "User NOT Deleted!\Somthing wrong happened!";
+					cout << "User NOT Deleted!\nSomthing wrong happened!";
 				}
 			}
 		}

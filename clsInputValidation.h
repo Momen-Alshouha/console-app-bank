@@ -102,7 +102,7 @@ public:
 		return Number;
 	}
 
-	static double ReadDblNumber(string ErrorMessage = "Invalid Number, Enter again\n")
+	static float ReadDblNumber(string ErrorMessage = "Invalid Number, Enter again\n")
 	{
 		double Number;
 		while (!(cin >> Number)) {
