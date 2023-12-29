@@ -5,14 +5,7 @@
 class clsListUsersScreen : public clsScreen
 {
 private:
-	static void _PrintUserRecordLine(clsUser User) {
-		cout << "| " << setw(22) << left << User.fullname;
-		cout << "| " << setw(20) << left << User.phone;
-		cout << "| " << setw(17) << left << User.email;
-		cout << "| " << setw(12) << left << User.UserName;
-		cout << "| " << setw(12) << left << User.Password;
-		cout << "| " << setw(10) << left << User.Permissions;
-	}
+	
 
 public:
 
@@ -38,7 +31,7 @@ public:
 
 			for (clsUser& User : vUsers)
 			{
-				_PrintUserRecordLine(User);
+				PrintUser(User);
 				cout << endl;
 			}
 

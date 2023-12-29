@@ -8,6 +8,7 @@
 #include "clsClient.h"
 #include "clsInputValidation.h"
 #include "clsDate.h"
+#include "clsUser.h"
 
 using namespace std;
 
@@ -20,11 +21,18 @@ protected:
 
 	static void ReadClientInfo(clsClient& Client);
 
+	static void ReadUserInfo(clsUser& User);
+
+	static int _ReadPermissionsToSet();
+	
 public:
 
 	static void _DrawScreenHeader(string Title, string SubTitle = "");	
 	
 	static void PrintClient(clsClient& client);
+
+	static void PrintUser(clsUser& User);
+
 
 };
 

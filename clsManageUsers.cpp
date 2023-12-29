@@ -42,6 +42,7 @@ void clsManageUsers::_ListUsers()
 void clsManageUsers::_AddUser()
 {
     _DrawScreenHeader("Add User");
+    clsAddNewUserScreen::ShowAddNewUserScreen();
 }
 
 void clsManageUsers::_UpdateUser()
@@ -62,7 +63,7 @@ void clsManageUsers::_FindUser()
 void clsManageUsers::_GoBackToManageUsersMenu()
 {
 
-    cout << "Press any key to go back to manage users menu\n";
+    cout << "\nPress any key to go back to manage users menu\n";
     system("pause>0");
     ShowManageUsersScreen();
 }
