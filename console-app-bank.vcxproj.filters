@@ -60,9 +60,6 @@
     <ClCompile Include="clsManageUsers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="clsUser.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clsString.h">

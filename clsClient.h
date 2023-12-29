@@ -5,12 +5,15 @@
 
 class clsClient : public clsPerson
 {
-	enum enMode { EmptyMode = 0, UpdateMode ,AddMode };
+	enum enMode { EmptyMode , UpdateMode , AddMode  };
+
+	enMode _Mode;
+	
 	const static string ClientFileName;
 
 	string _AccountNumber, _PinCode;
 	float _Balance;
-	enMode _Mode=EmptyMode;
+	
 	
 	static string _ConvertClientObjectToLine(clsClient Client,string Line,string Delimeter);
 

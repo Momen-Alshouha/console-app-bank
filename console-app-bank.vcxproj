@@ -140,7 +140,6 @@
     <ClCompile Include="clsTotalBalancesScreen.cpp" />
     <ClCompile Include="clsTransactionsScreen.cpp" />
     <ClCompile Include="clsUpdateClientScreen.cpp" />
-    <ClCompile Include="clsUser.cpp" />
     <ClCompile Include="clsWithdrawScreen.cpp" />
     <ClCompile Include="console-app-bank.cpp" />
   </ItemGroup>
