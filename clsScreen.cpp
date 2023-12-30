@@ -136,12 +136,17 @@ void clsScreen::_DrawScreenHeader(string Title, string SubTitle)
 {
     clsDate Date;
     cout << "=================================================";
+    if (!UserSession::getCurrentUser().IsEmpty())
+    {
+        cout << endl<<"  Welcome " << UserSession::getCurrentUser().UserName << endl;
+    }
     cout << "\n  " << Title<<" | "; 
 	clsDate::PrintTodayAndTime();
     if (SubTitle != "")
     {
         cout << "\n\t" << SubTitle;
     }
+    
     cout << "\n=================================================\n";
 }
 
