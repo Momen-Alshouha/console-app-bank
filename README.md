@@ -16,8 +16,8 @@ This repository contains a console-based banking application written in C++, emp
 
 The application includes an admin user with default credentials for testing purposes:
 
-- **Username**: admin_user
-- **Password**: admin_password123
+- **Username**: admin
+- **Password**: admin
 
 ## Custom Libraries
 
