@@ -42,11 +42,6 @@ void clsMainMenu::_ShowManageUsersMenu()
 
 }
 
-void clsMainMenu::_ShowEndScreen()
-{
-    cout << "\nThank You\n";
-}
-
 
 void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
 {
@@ -85,8 +80,8 @@ void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
         _ShowManageUsersMenu();
         _GoBackToMainMenu();
         break;
-    case clsMainMenu::eExit:
-        _ShowEndScreen();
+    case clsMainMenu::eLogout:
+        _Logout();
         break;
     default:
         break;
@@ -104,6 +99,12 @@ void clsMainMenu::_GoBackToMainMenu()
     cout << "\nPress any key to back to main menu...\n";
     system("pause>0");
     ShowMainMenu();
+}
+
+void clsMainMenu::_Logout()
+{
+    CurrentUser = clsUser::Find("", "");
+    clsLoginScreen::ShowLoginScreen();
 }
 
 void clsMainMenu::ShowMainMenu()
