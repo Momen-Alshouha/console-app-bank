@@ -24,28 +24,28 @@ The application includes an admin user with default credentials for testing purp
 
 Here are some screenshots from the application:
 
-- Login
+#### Login
 ![Login](screenshots/login.png)
 
-- Main Menu
+#### Main Menu
 ![Main Menu](screenshots/main_menu_screen.png)
 
-- Manage Users Menu
+#### Manage Users Menu
 ![Manage Users Menu](screenshots/manage_users_screen.png)
 
-- List Users
+#### List Users
 ![List Users](screenshots/list_users_screen.png)
 
-- List Clients
+#### List Clients
 ![List Clients](screenshots/list_clients_screen.png)
 
-- Client Added Successfully
+#### Client Added Successfully
 ![Client Added Successfully](screenshots/add_client.png)
 
-- Access Denied
+#### Access Denied
 ![Access Denied](screenshots/if_access_denied.png)
 
-- Invalid Login
+#### Invalid Login
 ![Invalid Login](screenshots/invalid_login.png)
 
 ## Custom Libraries
@@ -88,8 +88,6 @@ Ensure you have the following installed on your system:
      ```bash
      g++ -o console-app-bank.exe console-app-bank.cpp
      ```
-
-   Replace `console-app-bank.cpp` with your main C++ file.
 
 ### Execution
 
