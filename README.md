@@ -7,6 +7,7 @@ This repository contains a console-based banking application written in C++, emp
 - **Client Operations**:
   - Create, Read, Update, Delete client data
   - Manage client accounts and transactions
+
 - **User Operations**:
   - Create, Read, Update, Delete user data
   - Permission-based operations
@@ -29,15 +30,30 @@ This repository includes 5 custom-built libraries implemented to enhance the fun
 4. **clsString**: Library for string manipulation and formatting.
 5. **clsUtil**: Utility library containing miscellaneous functions used across the application.
 
-## Some Screenshots
+## Screenshots
 
+Here are some screenshots from the application:
+
+### Login
 ![Login](screenshots/login.png)
-![Main Menu](screenshots/main_menu_screen.png)
-![Manage Users Menu](screenshots/manage_users_screen.png)
-![List Users](screenshots/list_users_screen.png)
-![list Clients](screenshots/list_clients_screen.png)
-![Client Added Successfuly](screenshots/add_client.png)
-![Manage Users Menu](screenshots/manage_users_screen.png)
-![Access Denied](screenshots/if_access_denied.png)
-![Invalid Login](screenshots/invalid_login.png)
 
+### Main Menu
+![Main Menu](screenshots/main_menu_screen.png)
+
+### Manage Users Menu
+![Manage Users Menu](screenshots/manage_users_screen.png)
+
+### List Users
+![List Users](screenshots/list_users_screen.png)
+
+### List Clients
+![List Clients](screenshots/list_clients_screen.png)
+
+### Client Added Successfully
+![Client Added Successfully](screenshots/add_client.png)
+
+### Access Denied
+![Access Denied](screenshots/if_access_denied.png)
+
+### Invalid Login
+![Invalid Login](screenshots/invalid_login.png)
