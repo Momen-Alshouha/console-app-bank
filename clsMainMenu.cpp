@@ -168,7 +168,7 @@ void clsMainMenu::ShowMainMenu()
     cout  << "\t[7] Transactions.\n";
     cout << "\t[8] Manage Users.\n";
     cout <<"\t[9] Logout.\n";
-    cout << "====================================\n";
+    cout << "=================================================";
 
     _PerfromMainMenuOption((enMainMenuOption)_ReadMainMenueOption());
 }
