@@ -7,8 +7,13 @@
 #include <fstream>
 
 using namespace std;
+
+const string UsersFilePath = "data/users.txt";
+
 class clsUser : public clsPerson
 {
+public:
+    
 private:
 
     enum enMode { EmptyMode, UpdateMode , AddNewMode };
@@ -51,7 +56,7 @@ private:
         vector <clsUser> vUsers;
 
         fstream MyFile;
-        MyFile.open("Users.txt", ios::in);
+        MyFile.open(UsersFilePath, ios::in);
 
         if (MyFile.is_open())
         {
@@ -79,7 +84,7 @@ private:
     {
 
         fstream MyFile;
-        MyFile.open("Users.txt", ios::out);
+        MyFile.open(UsersFilePath, ios::out);
         string DataLine;
 
         if (MyFile.is_open())
@@ -130,7 +135,7 @@ private:
     void _AddDataLineToFile(string  stDataLine)
     {
         fstream MyFile;
-        MyFile.open("Users.txt", ios::out | ios::app);
+        MyFile.open(UsersFilePath, ios::out | ios::app);
 
         if (MyFile.is_open())
         {
@@ -213,7 +218,7 @@ public:
     static clsUser Find(string UserName)
     {
         fstream MyFile;
-        MyFile.open("Users.txt", ios::in);
+        MyFile.open(UsersFilePath, ios::in);
 
         if (MyFile.is_open())
         {
@@ -239,7 +244,7 @@ public:
     {
 
         fstream MyFile;
-        MyFile.open("Users.txt", ios::in);
+        MyFile.open(UsersFilePath, ios::in);
 
         if (MyFile.is_open())
         {
@@ -345,4 +350,3 @@ public:
 
 
 };
-

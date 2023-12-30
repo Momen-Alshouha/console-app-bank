@@ -4,7 +4,7 @@
 #include <fstream>
 #include "clsString.h"
 
-const string clsClient::ClientFileName = "Clients.txt";
+const string clsClient::ClientFileName = "data/Clients.txt";
 
 
 string clsClient::_ConvertClientObjectToLine(clsClient Client,string Line, string Delimeter = "#//#")
