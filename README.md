@@ -28,3 +28,16 @@ This repository includes 5 custom-built libraries implemented to enhance the fun
 3. **clsInputValidation**: Library for validating user inputs and ensuring data integrity.
 4. **clsString**: Library for string manipulation and formatting.
 5. **clsUtil**: Utility library containing miscellaneous functions used across the application.
+
+## Some Screenshots
+
+![Login](screenshots/login.png)
+![Main Menu](screenshots/main_menu_screen.png)
+![Manage Users Menu](screenshots/manage_users_screen.png)
+![List Users](screenshots/list_users_screen.png)
+![list Clients](screenshots/list_clients_screen.png)
+![Client Added Successfuly](screenshots/add_client.png)
+![Manage Users Menu](screenshots/manage_users_screen.png)
+![Access Denied](screenshots/if_access_denied.png)
+![Invalid Login](screenshots/invalid_login.png)
+
