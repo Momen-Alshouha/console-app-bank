@@ -4,6 +4,9 @@
 #include<iostream>
 #include<string>
 #include "clsString.h"
+#include <chrono>
+#include <ctime>
+#include <sstream>
 
 using namespace std;
 
@@ -1126,5 +1129,22 @@ public:
 		cout << buffer;
 	}
 
+	static string GetTodayAndTime() {
+		time_t now = time(nullptr);
+		tm* timeinfo = localtime(&now);
+		const char* days[] = { "Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat" };
+		const char* months[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+		int dayOfWeek = timeinfo->tm_wday;
+		int month = timeinfo->tm_mon;
+
+		std::stringstream ss;
+		ss << days[dayOfWeek] << ", " << timeinfo->tm_mday << "-" << months[month] << "-" << timeinfo->tm_year + 1900 << ", ";
+
+		char buffer[80];
+		strftime(buffer, 80, "%H:%M:%S UTC", timeinfo);
+		ss << buffer;
+
+		return ss.str();
+	}
 };
 

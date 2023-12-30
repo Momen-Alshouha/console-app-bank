@@ -10,7 +10,6 @@
 #include "clsDate.h"
 #include "clsUser.h"
 #include "Global.h"
-
 using namespace std;
 
 class clsScreen

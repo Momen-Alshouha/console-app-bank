@@ -2,6 +2,8 @@
 #include <iostream>
 #include "clsUser.h"
 
+const string LogFilePath = "data/logs.txt";
+
 class UserSession {
 public:
     static clsUser& getCurrentUser() {
