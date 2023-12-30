@@ -20,7 +20,7 @@ void clsLoginScreen::_Login()
         cin >> Username;
 
         cout << "Enter Password? ";
-        cin >> Password;
+        Password = clsInputValidate::ReadPassword();
 
         UserSession::setCurrentUser(Username, Password);
 

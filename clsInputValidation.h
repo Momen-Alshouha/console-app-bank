@@ -3,6 +3,8 @@
 #include <string>
 #include "clsString.h"
 #include "clsDate.h"
+#include <windows.h>
+#include <conio.h>
 
 class clsInputValidate
 {
@@ -62,7 +64,7 @@ public:
 		int Number;
 		while (!(cin >> Number)) {
 			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cin.ignore(INT_MAX, '\n');
 			cout << ErrorMessage;
 		}
 		return Number;
@@ -85,7 +87,7 @@ public:
 		float Number;
 		while (!(cin >> Number)) {
 			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cin.ignore(INT_MAX, '\n');
 			cout << ErrorMessage;
 		}
 		return Number;
@@ -107,7 +109,7 @@ public:
 		double Number;
 		while (!(cin >> Number)) {
 			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cin.ignore(INT_MAX, '\n');
 			cout << ErrorMessage;
 		}
 		return Number;
@@ -136,5 +138,30 @@ public:
 		// Usage of std::ws will extract allthe whitespace character
 		getline(cin >> ws, S1);
 		return S1;
+	}
+
+	static string ReadPassword() {
+		const char ENTER_KEY = 13;
+		const char BACKSPACE = 8;
+
+		string password;
+		char ch = _getch();
+
+		while (ch != ENTER_KEY) {
+			if (ch == BACKSPACE) {
+				if (!password.empty()) {
+					password.pop_back();
+					cout << "\b \b";
+				}
+			}
+			else {
+				password.push_back(ch);
+				cout << '*';
+			}
+			ch = _getch();
+		}
+
+		cout <<endl;
+		return password;
 	}
 };
