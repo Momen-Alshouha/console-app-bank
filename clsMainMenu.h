@@ -43,6 +43,8 @@ class clsMainMenu : protected clsScreen
 
 	static void _Logout();
 
+	static bool CheckPermission(clsUser::enPermissions Permission);
+
 public:
 	
 	static void ShowMainMenu();

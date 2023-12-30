@@ -2,13 +2,13 @@
 
 void clsLoginScreen::_Login()
 {
-    bool LoginFaild = false;
+    bool LoginFailed = false;
 
     string Username, Password;
     do
     {
 
-        if (LoginFaild)
+        if (LoginFailed)
         {
             system("cls");
             _DrawScreenHeader(" Login Screen");
@@ -21,11 +21,11 @@ void clsLoginScreen::_Login()
         cout << "Enter Password? ";
         cin >> Password;
 
-        CurrentUser = clsUser::Find(Username, Password);
+        UserSession::setCurrentUser(Username, Password);
 
-        LoginFaild = CurrentUser.IsEmpty();
+        LoginFailed = UserSession::getCurrentUser().IsEmpty();
 
-    } while (LoginFaild);
+    } while (LoginFailed);
 
     clsMainMenu::ShowMainMenu();
 }

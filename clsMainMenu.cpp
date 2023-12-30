@@ -48,38 +48,72 @@ void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
     system("cls");
     switch (Option)
     {
-    case clsMainMenu::eListClients:
-        _ShowAllClientsScreen();
+    case clsMainMenu::eListClients:    
+        if (CheckPermission(clsUser::pListClients))
+        {
+           _ShowAllClientsScreen();
+        }
         _GoBackToMainMenu();
         break;
+
     case clsMainMenu::eAddNewClient:
-        _ShowAddNewClientsScreen();
+        if (CheckPermission(clsUser::pAddNewClient))
+        {
+            _ShowAddNewClientsScreen();
+        }
         _GoBackToMainMenu();
         break;
+
     case clsMainMenu::eDeleteClient:
-        _ShowDeleteClientScreen();
+        if (CheckPermission(clsUser::pDeleteClient))
+        {
+            _ShowDeleteClientScreen();
+        }
         _GoBackToMainMenu();
         break;
+
     case clsMainMenu::eDeleteAllClients:
-        _ShowDeleteAllClientsScreen();
+        
+        if (CheckPermission(clsUser::pDeleteClient))
+        {
+            _ShowDeleteAllClientsScreen();
+        }
         _GoBackToMainMenu();
         break;
+
     case clsMainMenu::eUpdateClient:
-        _ShowUpdateClientScreen();
+        
+        if (CheckPermission(clsUser::pUpdateClients))
+        {
+            _ShowUpdateClientScreen();
+        }
         _GoBackToMainMenu();
         break;
+
     case clsMainMenu::eFindClient:
-        _ShowFindClientScreen();
+        if (CheckPermission(clsUser::pFindClient))
+        {
+            _ShowFindClientScreen();
+        }
         _GoBackToMainMenu();
         break;
+
     case clsMainMenu::eShowTransactionsMenue:
-        _ShowTransactionsMenu();
+        if (CheckPermission(clsUser::pTranactions))
+        {
+            _ShowTransactionsMenu();
+        }
         _GoBackToMainMenu();
         break;
+
     case clsMainMenu::eManageUsers:
-        _ShowManageUsersMenu();
+        if (CheckPermission(clsUser::pManageUsers))
+        {
+           _ShowManageUsersMenu();
+        }
         _GoBackToMainMenu();
         break;
+
     case clsMainMenu::eLogout:
         _Logout();
         break;
@@ -103,8 +137,22 @@ void clsMainMenu::_GoBackToMainMenu()
 
 void clsMainMenu::_Logout()
 {
-    CurrentUser = clsUser::Find("", "");
-    clsLoginScreen::ShowLoginScreen();
+    UserSession::getCurrentUser() = clsUser::Find("", "");
+}
+
+bool clsMainMenu::CheckPermission(clsUser::enPermissions Permission)
+{
+    if (Permission==clsUser::eAll)
+    {
+        return true;
+    }
+    else if ((Permission & UserSession::getCurrentUser().Permissions) == Permission)
+    {
+        return true;
+    }
+    _DrawScreenHeader("ACCESS DENIED !! ");
+    cout << "\n - Please Contact Your Admin!\n";
+    return false;
 }
 
 void clsMainMenu::ShowMainMenu()
