@@ -150,7 +150,7 @@ bool clsMainMenu::CheckPermission(clsUser::enPermissions Permission)
     {
         return true;
     }
-    _DrawScreenHeader("ACCESS DENIED !! ");
+    _DrawScreenHeader("ACCESS DENIED!");
     cout << "\n - Please Contact Your Admin!\n";
     return false;
 }
@@ -168,7 +168,7 @@ void clsMainMenu::ShowMainMenu()
     cout  << "\t[7] Transactions.\n";
     cout << "\t[8] Manage Users.\n";
     cout <<"\t[9] Logout.\n";
-    cout << "=================================================";
+    cout << "=================================================\n";
 
     _PerfromMainMenuOption((enMainMenuOption)_ReadMainMenueOption());
 }
