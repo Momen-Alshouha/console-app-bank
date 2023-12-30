@@ -77,9 +77,9 @@ Ensure you have the following installed on your system:
 
 2. **Compile the Code:**
 
-   - **For Visual Studio Community (Windows):**
+   - **For Visual Studio :**
 
-     Open the project in Visual Studio Community and compile using the IDE.
+     Open the project in Visual Studio and compile using the IDE.
 
    - **For Unix-like systems (using GCC):**
 
@@ -97,7 +97,7 @@ Ensure you have the following installed on your system:
 
 Run the Executable:
 
-- **For Visual Studio Community (Windows):**
+- **For Visual Studio:**
 
     Run the compiled application from within the Visual Studio Community IDE.
 
