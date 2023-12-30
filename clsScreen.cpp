@@ -105,7 +105,7 @@ void clsScreen::PrintClient(clsClient& client)
 	cout << "\nEmail       : " << client.email;
 	cout << "\nPhone       : " << client.phone;
 	cout << "\nAcc. Number : " << client.account_number;
-	cout << "\PinCode    : " << client.pin_code;
+	cout << "\nPinCode    : " << client.pin_code;
 	cout << "\nBalance     : " << client.balance;
 	cout << "\n___________________\n";
 }
