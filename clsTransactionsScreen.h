@@ -4,12 +4,13 @@
 #include "clsMainMenu.h"
 #include "clsDepositeScreen.h"
 #include "clsWithdrawScreen.h"
+#include "clsTransferScreen.h"
 
 class clsTransactionsScreen : public clsScreen
 {
 	enum enTransactionMenuOption
 	{
-		enDeposite = 1, enWithdraw, enTotalBalances, enMainMenu
+		enDeposite = 1, enWithdraw, enTotalBalances,enTransfer, enMainMenu
 	};
 
 	static short _ReadTransactionMenuOption();
@@ -23,6 +24,8 @@ class clsTransactionsScreen : public clsScreen
 	static void _ShowWithdrawScreen();
 
 	static void _ShowTotalBalancesScreen();
+
+	static void _Transfer();
 
 public:
 	static void ShowTransactionScreen();

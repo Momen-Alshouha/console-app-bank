@@ -31,6 +31,8 @@ public:
 	
 	static void PrintClient(clsClient& client);
 
+	static void PrintShortlistedClient(clsClient& client);
+
 	static void PrintUserCard(clsUser& User);
 
 	static void PrintUserRecord(clsUser& User);

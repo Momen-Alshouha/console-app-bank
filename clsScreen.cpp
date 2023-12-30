@@ -101,13 +101,12 @@ int clsScreen::_ReadPermissionsToSet() {
 
     return Permissions;
 }
+
 void clsScreen::PrintClient(clsClient& client)
 {
 
 	cout << "\nClient Card:";
 	cout << "\n___________________";
-	cout << "\nFirstName   : " << client.firstname;
-	cout << "\nLastName    : " << client.lastname;
 	cout << "\nFull Name   : " << client.fullname;
 	cout << "\nEmail       : " << client.email;
 	cout << "\nPhone       : " << client.phone;
@@ -116,6 +115,19 @@ void clsScreen::PrintClient(clsClient& client)
 	cout << "\nBalance     : " << client.balance;
 	cout << "\n___________________\n";
 }
+
+
+
+void clsScreen::PrintShortlistedClient(clsClient& client)
+{
+    cout << "\nClient Card:";
+    cout << "\n___________________";
+    cout << "\nFull Name   : " << client.fullname;
+    cout << "\nAcc. Number : " << client.account_number;
+    cout << "\nBalance     : " << client.balance;
+    cout << "\n___________________\n";
+}
+
 
 void clsScreen::PrintUserCard(clsUser& User) {
 
@@ -129,6 +141,7 @@ void clsScreen::PrintUserCard(clsUser& User) {
     cout << "\nPermissions : " << User.Permissions;
     cout << "\n___________________\n";
 }
+
 
 void clsScreen::PrintUserRecord(clsUser& User) {
     cout << "| " << left << setw(22) << User.fullname;
