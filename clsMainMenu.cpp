@@ -116,6 +116,7 @@ void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
 
     case clsMainMenu::eLogout:
         _Logout();
+        clsLoginScreen::ShowLoginScreen();
         break;
     default:
         break;

@@ -3,16 +3,17 @@
 void clsLoginScreen::_Login()
 {
     bool LoginFailed = false;
-
+    short LoginAttemps = 3;
     string Username, Password;
     do
     {
 
         if (LoginFailed)
         {
+            LoginAttemps--;
             system("cls");
             _DrawScreenHeader(" Login Screen");
-            cout << "\nInvlaid Username/Password!\n\n";
+            cout << "Invlaid Username/Password!\nYou have " << LoginAttemps << " Trials To login\n";
         }
 
         cout << "Enter Username? ";
@@ -25,9 +26,16 @@ void clsLoginScreen::_Login()
 
         LoginFailed = UserSession::getCurrentUser().IsEmpty();
 
-    } while (LoginFailed);
+    } while (LoginFailed && LoginAttemps>1);
 
-    clsMainMenu::ShowMainMenu();
+    if (!LoginFailed)
+    {
+        clsMainMenu::ShowMainMenu();
+    }
+    else {
+        system("cls");
+        _DrawScreenHeader("You Are Blocked, Please Try To Login Later!\n");
+    }
 }
 
 void clsLoginScreen::ShowLoginScreen()
