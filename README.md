@@ -13,6 +13,16 @@ This repository contains a console-based banking application written in C++, emp
   - Permission-based operations
   - User login and authentication
 
+## Custom Libraries
+
+This repository includes five custom-built libraries implemented to enhance the functionalities of the banking application, designed to be versatile and usable in other C++ applications too:
+
+1. **clsDate**: Handles date-related operations.
+2. **clsPeriod**: Manages time periods and durations.
+3. **clsInputValidation**: Validates user inputs and ensures data integrity.
+4. **clsString**: Manipulates strings and formats data.
+5. **clsUtil**: Contains miscellaneous functions used across the application.
+
 ## Admin Access
 
 The application includes an admin user with default credentials for testing purposes:
@@ -47,16 +57,6 @@ Here are some screenshots from the application:
 
 #### Invalid Login
 ![Invalid Login](screenshots/invalid_login.png)
-
-## Custom Libraries
-
-This repository includes five custom-built libraries implemented to enhance the functionalities of the banking application, designed to be versatile and usable in other C++ applications too:
-
-1. **clsDate**: Handles date-related operations.
-2. **clsPeriod**: Manages time periods and durations.
-3. **clsInputValidation**: Validates user inputs and ensures data integrity.
-4. **clsString**: Manipulates strings and formats data.
-5. **clsUtil**: Contains miscellaneous functions used across the application.
 
 ## Compile and Run the Code
 
