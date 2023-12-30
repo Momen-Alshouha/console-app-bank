@@ -42,6 +42,11 @@ void clsMainMenu::_ShowManageUsersMenu()
 
 }
 
+void clsMainMenu::_ShowLoginLogs()
+{
+    clsLoginLogs::ShowLoginLogs();
+}
+
 
 void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
 {
@@ -114,6 +119,15 @@ void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
         _GoBackToMainMenu();
         break;
 
+    case clsMainMenu::eLoginLogs:
+        if (CheckPermission(clsUser::pLoginLogs))
+        {
+            _ShowLoginLogs();
+        }
+        _GoBackToMainMenu();
+        break;
+
+
     case clsMainMenu::eLogout:
         _Logout();
         clsLoginScreen::ShowLoginScreen();
@@ -125,7 +139,7 @@ void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
 
 int clsMainMenu::_ReadMainMenueOption()
 {
-    cout << "Enter Option [1-9] : ";
+    cout << "Enter Option [1-10] : ";
     return clsInputValidate::ReadIntNumberBetween(1, 9);
 }
 
@@ -168,7 +182,8 @@ void clsMainMenu::ShowMainMenu()
     cout << "\t[6] Find Client.\n";
     cout  << "\t[7] Transactions.\n";
     cout << "\t[8] Manage Users.\n";
-    cout <<"\t[9] Logout.\n";
+    cout << "\t[9] Login Logs.\n";
+    cout <<"\t[10] Logout.\n";
     cout << "=================================================\n";
 
     _PerfromMainMenuOption((enMainMenuOption)_ReadMainMenueOption());

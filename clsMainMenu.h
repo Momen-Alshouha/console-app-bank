@@ -9,6 +9,7 @@
 #include "clsTransactionsScreen.h"
 #include "clsManageUsers.h"
 #include "clsLoginScreen.h"
+#include "clsLoginLogs.h"
 
 class clsMainMenu : protected clsScreen
 {
@@ -16,7 +17,7 @@ class clsMainMenu : protected clsScreen
 	{
 		eListClients = 1, eAddNewClient = 2, eDeleteClient = 3,eDeleteAllClients=4,
 		eUpdateClient = 5, eFindClient = 6, eShowTransactionsMenue = 7,
-		eManageUsers = 8, eLogout = 9
+		eManageUsers = 8, eLoginLogs=9,eLogout = 10
 	};
 
 	static void _ShowAllClientsScreen();
@@ -34,6 +35,8 @@ class clsMainMenu : protected clsScreen
 	static void _ShowTransactionsMenu();
 
 	static void _ShowManageUsersMenu();
+
+	static void _ShowLoginLogs();
 
 	static void _PerfromMainMenuOption(enMainMenuOption Option);
 

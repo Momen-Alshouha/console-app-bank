@@ -85,6 +85,13 @@ int clsScreen::_ReadPermissionsToSet() {
         Permissions += clsUser::enPermissions::pTranactions;
     }
 
+    cout << "\Login Logs? y/n? ";
+    cin >> Answer;
+    if (tolower(Answer[0]) == 'y')
+    {
+        Permissions += clsUser::enPermissions::pLoginLogs;
+    }
+
     cout << "\nManage Users? y/n? ";
     cin >> Answer;
     if (tolower(Answer[0]) == 'y')
