@@ -1,6 +1,6 @@
 # Bank Console App (C++)
 
-This repository contains a console-based banking application written in C++, emphasizing Object-Oriented Programming (OOP) principles. The application manages client and user data through file handling for CRUD (Create, Read, Update, Delete) operations for both clients and users, integrating simple permission-based functionalities including a login system for users.
+This repository contains a console-based banking application written in C++, emphasizing Object-Oriented Programming (OOP) principles. The application manages client and user data through file handling for CRUD (Create, Read, Update, Delete) operations for both clients and users, integrating simple permission-based functionalities, including a login system for users.
 
 ## Key Features
 
@@ -20,40 +20,89 @@ The application includes an admin user with default credentials for testing purp
 - **Username**: admin
 - **Password**: admin
 
-## Custom Libraries
-
-This repository includes 5 custom-built libraries implemented to enhance the functionalities of the banking application. These libraries are designed to be versatile and can be utilized in other C++ applications too:
-
-1. **clsDate**: Library for handling date-related operations.
-2. **clsPeriod**: Library for managing time periods and durations.
-3. **clsInputValidation**: Library for validating user inputs and ensuring data integrity.
-4. **clsString**: Library for string manipulation and formatting.
-5. **clsUtil**: Utility library containing miscellaneous functions used across the application.
-
 ## Screenshots
 
 Here are some screenshots from the application:
 
-### Login
+- Login
 ![Login](screenshots/login.png)
 
-### Main Menu
+- Main Menu
 ![Main Menu](screenshots/main_menu_screen.png)
 
-### Manage Users Menu
+- Manage Users Menu
 ![Manage Users Menu](screenshots/manage_users_screen.png)
 
-### List Users
+- List Users
 ![List Users](screenshots/list_users_screen.png)
 
-### List Clients
+- List Clients
 ![List Clients](screenshots/list_clients_screen.png)
 
-### Client Added Successfully
+- Client Added Successfully
 ![Client Added Successfully](screenshots/add_client.png)
 
-### Access Denied
+- Access Denied
 ![Access Denied](screenshots/if_access_denied.png)
 
-### Invalid Login
+- Invalid Login
 ![Invalid Login](screenshots/invalid_login.png)
+
+## Custom Libraries
+
+This repository includes five custom-built libraries implemented to enhance the functionalities of the banking application, designed to be versatile and usable in other C++ applications too:
+
+1. **clsDate**: Handles date-related operations.
+2. **clsPeriod**: Manages time periods and durations.
+3. **clsInputValidation**: Validates user inputs and ensures data integrity.
+4. **clsString**: Manipulates strings and formats data.
+5. **clsUtil**: Contains miscellaneous functions used across the application.
+
+## Compile and Run the Code
+
+### Prerequisites
+
+Ensure you have the following installed on your system:
+- C++ compiler (e.g., GCC for Unix-like systems or MinGW for Windows)
+- Git (for cloning the repository)
+
+### Compilation
+
+1. **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/console-app-bank/yourproject.git
+    cd console-app-bank
+    ```
+
+2. **Compile the Code:**
+
+   - **For Unix-like systems (using GCC):**
+
+     ```bash
+     g++ -o console-app-bank console-app-bank.cpp
+     ```
+   
+   - **For Windows (using MinGW):**
+
+     ```bash
+     g++ -o console-app-bank.exe console-app-bank.cpp
+     ```
+
+   Replace `console-app-bank.cpp` with your main C++ file.
+
+### Execution
+
+Run the Executable:
+
+- **For Unix-like systems (using GCC):**
+
+    ```bash
+    ./console-app-bank
+    ```
+
+- **For Windows:**
+
+    ```bash
+    console-app-bank.exe
+    ```
