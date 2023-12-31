@@ -13,17 +13,15 @@ public:
 
 		while (!clsClient::IsClientExisits(AccNumFrom))
 		{
-			AccNumFrom = clsInputValidate::ReadString("\nClient does not exist!\nEnter Account Number To Transfer From : ");
+			AccNumFrom = clsInputValidate::ReadString("\nClient does not exist!\nEnter Account Number To Transfer From :\n");
 		}
 		
-		string AccNumTo = clsInputValidate::ReadString("\nEnter Account Number To Transfer To : ");
+		string AccNumTo = clsInputValidate::ReadString("\nEnter Account Number To Transfer To : \n");
 
-		while (!clsClient::IsClientExisits(AccNumFrom))
+		while (!clsClient::IsClientExisits(AccNumTo))
 		{
-			AccNumTo = clsInputValidate::ReadString("\nClient dows not exist!\nEnter Account Number To Transfer To : ");
+			AccNumTo = clsInputValidate::ReadString("\nClient dows not exist!\nEnter Account Number To Transfer To : \n");
 		}
-
-
 
 		clsClient TransferFromClient = clsClient::Find(AccNumFrom);
 		clsClient TransferToClient = clsClient::Find(AccNumTo);
@@ -36,11 +34,7 @@ public:
 		cout << "-------------------------------\n";
 		cout << "\nBalance is "<<TransferFromClient.balance<<" Enter Amount To Transfer : \n";
 		AmountToTransfer = clsInputValidate::ReadFloatNumberBetween(1, TransferFromClient.balance);
-		TransferFromClient.balance -= AmountToTransfer;
-		TransferFromClient.Save();
-
-		TransferToClient.balance += AmountToTransfer;
-		TransferToClient.Save();
+		TransferFromClient.Transfer(AmountToTransfer, TransferToClient);
 		system("cls");
 		_DrawScreenHeader("Transfer Screen");
 		cout << "\nAmount Transfered Successfully\n";

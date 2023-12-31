@@ -264,3 +264,15 @@ void clsClient::Withdraw(float amount)
 	this->balance -= amount;
 	Save();
 }
+
+bool clsClient::Transfer(float amount, clsClient& DestinationClient)
+{
+	if (amount > balance)
+	{
+		return false;
+	}
+
+	Withdraw(amount);
+	DestinationClient.Deposite(amount);
+	return true;
+}

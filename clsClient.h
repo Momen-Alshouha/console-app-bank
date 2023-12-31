@@ -81,5 +81,7 @@ public:
 	void Deposite(float amount);
 
 	void Withdraw(float amount);
-	
+
+	bool Transfer(float amount, clsClient& DestinationClient);
+
 };
