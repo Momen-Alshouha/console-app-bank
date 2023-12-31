@@ -512,5 +512,21 @@ public:
             str[i] = toupper(str[i]);
         }
     }
+
+    static string Encrypt(string &Str) {
+        for (int i = 0; i < Str.length()-1; i++)
+        {
+            Str[i] = Str[i] + 5;
+        }
+        return Str;
+    }
+
+    static string Decrypt(string& Str) {
+        for (int i = 0; i < Str.length() - 1; i++)
+        {
+            Str[i] = Str[i] - 5;
+        }
+        return Str;
+    }
 };
 

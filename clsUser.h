@@ -252,7 +252,7 @@ public:
             while (getline(MyFile, Line))
             {
                 clsUser User = _ConvertLinetoUserObject(Line);
-                if (User.UserName == UserName && User.Password == Password)
+                if (User.UserName == UserName && User.Password ==Password)
                 {
                     MyFile.close();
                     return User;

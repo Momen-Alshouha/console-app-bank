@@ -140,7 +140,7 @@ void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
 int clsMainMenu::_ReadMainMenueOption()
 {
     cout << "Enter Option [1-10] : ";
-    return clsInputValidate::ReadIntNumberBetween(1, 9);
+    return clsInputValidate::ReadIntNumberBetween(1, 10);
 }
 
 void clsMainMenu::_GoBackToMainMenu()

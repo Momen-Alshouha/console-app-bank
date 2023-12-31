@@ -22,7 +22,8 @@ void clsScreen::ReadUserInfo(clsUser& User) {
 	User.lastname = clsInputValidate::ReadString("\nEnter Last Name : ");
 	User.email = clsInputValidate::ReadString("\nEnter Email : ");
 	User.phone = clsInputValidate::ReadString("\nEnter Phone Number : ");
-	User.Password= clsInputValidate::ReadString("\nEnter Password : ");
+	string Password= clsInputValidate::ReadString("\nEnter Password : ");
+    User.Password = clsString::Encrypt(Password);
 	cout << "\nEnter Permission: ";
 	User.Permissions= _ReadPermissionsToSet();
 }

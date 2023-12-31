@@ -43,7 +43,7 @@ void clsLoginScreen::_Login()
 
         cout << "Enter Password? ";
         Password = clsInputValidate::ReadPassword();
-
+        Password = clsString::Encrypt(Password);
         UserSession::setCurrentUser(Username, Password);
 
         LoginFailed = UserSession::getCurrentUser().IsEmpty();
