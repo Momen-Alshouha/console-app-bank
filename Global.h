@@ -2,7 +2,9 @@
 #include <iostream>
 #include "clsUser.h"
 
-const string LogFilePath = "data/logs.txt";
+const string LogLoginFilePath = "data/LoginLogs.txt";
+const string LogTransferFilePath = "data/TransferLogs.txt";
+
 
 class UserSession {
 public:

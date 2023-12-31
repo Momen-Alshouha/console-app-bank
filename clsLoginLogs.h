@@ -23,7 +23,7 @@ class clsLoginLogs :public clsScreen {
 		string LogLine="";
 		stLoginLog Log;
 		vector<stLoginLog> vLogs;
-		LogFile.open(LogFilePath, ios::in);
+		LogFile.open(LogLoginFilePath, ios::in);
 		if (LogFile.is_open())
 		{
 			while (getline(LogFile,LogLine))

@@ -2,8 +2,8 @@
 
 short clsTransactionsScreen::_ReadTransactionMenuOption()
 {
-   cout << "Enter Option (1-5) : ";
-   return clsInputValidate::ReadIntNumberBetween(1, 5);
+   cout << "Enter Option (1-6) : ";
+   return clsInputValidate::ReadIntNumberBetween(1, 6);
 }
 
 void clsTransactionsScreen::_PerformTransactionMenuOption(enTransactionMenuOption Option)
@@ -25,6 +25,10 @@ void clsTransactionsScreen::_PerformTransactionMenuOption(enTransactionMenuOptio
         break;
     case clsTransactionsScreen::enTransfer:
         _Transfer();
+        _GoBackToTransactionMenu();
+        break;
+    case clsTransactionsScreen::eTransferLog:
+        _ShowTransferLogScreen();
         _GoBackToTransactionMenu();
         break;
     case clsTransactionsScreen::enMainMenu:
@@ -59,7 +63,12 @@ void clsTransactionsScreen::_ShowTotalBalancesScreen()
 
 void clsTransactionsScreen::_Transfer()
 {
-    clsTransferScreen::Transfer();
+    clsTransfer::Transfer();
+}
+
+void clsTransactionsScreen::_ShowTransferLogScreen()
+{
+    clsTransfer::_TransferLogScreen();
 }
 
 void clsTransactionsScreen::ShowTransactionScreen()
@@ -69,8 +78,9 @@ void clsTransactionsScreen::ShowTransactionScreen()
     cout << "\t[1] Deposite.\n";
     cout << "\t[2] Withdraw.\n";
     cout << "\t[3] Show Total Balances.\n";
-    cout << "\t[4] Transfer.\n";
-    cout << "\t[5] Main Menu.\n";
+    cout << "\t[4] Transfer Operation.\n";
+    cout << "\t[5] Transfer Logs.\n";
+    cout << "\t[6] Main Menu.\n";
     cout << "====================================\n";
 
     _PerformTransactionMenuOption((enTransactionMenuOption)_ReadTransactionMenuOption());

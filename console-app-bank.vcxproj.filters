@@ -155,7 +155,7 @@
     <ClInclude Include="clsLoginLogs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="clsTransferScreen.h">
+    <ClInclude Include="clsTransfer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -14,7 +14,7 @@ void clsLoginScreen::_AddUserLoginToLogFile(clsUser& User)
 {
     string LogLine = _GenerateLoginLogLine(User);
     fstream LogsFile;
-    LogsFile.open(LogFilePath, ios::app);
+    LogsFile.open(LogLoginFilePath, ios::app);
     if (LogsFile.is_open())
     {
         LogsFile << LogLine << endl; 
