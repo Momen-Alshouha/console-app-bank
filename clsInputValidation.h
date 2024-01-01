@@ -11,6 +11,12 @@ class clsInputValidate
 
 public:
 
+	template<typename T>
+	static T ReadVariable() {
+		T num = 0;
+		cin >> T;
+	}
+
 	static bool IsNumberBetween(short Number, short From, short To)
 	{
 		if (Number >= From && Number <= To)
