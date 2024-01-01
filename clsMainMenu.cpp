@@ -47,6 +47,11 @@ void clsMainMenu::_ShowLoginLogs()
     clsLoginLogs::ShowLoginLogs();
 }
 
+void clsMainMenu::_ShowCurrencyExchangeMainMenuScreen()
+{
+    clsCurrencyMainScreen::ShowCurrencyMainMenu();
+}
+
 
 void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
 {
@@ -127,6 +132,16 @@ void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
         _GoBackToMainMenu();
         break;
 
+    case clsMainMenu::eCurrencyExchange:
+        
+        if (CheckPermission(clsUser::pCurrencyExchange))
+        {
+            clsCurrencyMainScreen::ShowCurrencyMainMenu();
+        }
+
+        _GoBackToMainMenu();
+        break;
+
 
     case clsMainMenu::eLogout:
         _Logout();
@@ -137,10 +152,10 @@ void clsMainMenu::_PerfromMainMenuOption(enMainMenuOption Option)
     }
 }
 
-int clsMainMenu::_ReadMainMenueOption()
+int clsMainMenu::_ReadMainMenuOption()
 {
-    cout << "Enter Option [1-10] : ";
-    return clsInputValidate::ReadIntNumberBetween(1, 10);
+    cout << "Enter Option [1-11] : ";
+    return clsInputValidate::ReadIntNumberBetween(1, 11);
 }
 
 void clsMainMenu::_GoBackToMainMenu()
@@ -183,10 +198,11 @@ void clsMainMenu::ShowMainMenu()
     cout  << "\t[7] Transactions.\n";
     cout << "\t[8] Manage Users.\n";
     cout << "\t[9] Login Logs.\n";
-    cout <<"\t[10] Logout.\n";
+    cout <<"\t[10] Currency Exchange.\n";
+    cout << "\t[11] Logout.\n";
     cout << "=================================================\n";
 
-    _PerfromMainMenuOption((enMainMenuOption)_ReadMainMenueOption());
+    _PerfromMainMenuOption((enMainMenuOption)_ReadMainMenuOption());
 }
 
 static  void _GoBackToMainMenue()

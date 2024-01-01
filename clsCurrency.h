@@ -169,12 +169,6 @@ public:
         _Update();
     }
 
-    float GetRate()
-    {
-        return _Rate;
-    }
-
-
     __declspec(property(get = GetCountry)) string country; // read only 
     __declspec(property(get = GetCurrencyCode)) string currencyCode; // read only 
     __declspec(property(get = GetCurrencyName)) string currencyName; // read only 
