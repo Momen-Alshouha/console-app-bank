@@ -5,6 +5,8 @@
 const string LogLoginFilePath = "data/LoginLogs.txt";
 const string LogTransferFilePath = "data/TransferLogs.txt";
 const string ClientFileName = "data/Clients.txt";
+const string CurrenciesFilePath= "data/Currencies.txt";
+
 
 class UserSession {
 public:

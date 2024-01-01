@@ -150,6 +150,7 @@
     <ClInclude Include="clsAddNewUserScreen.h" />
     <ClInclude Include="clsClient.h" />
     <ClInclude Include="clsClientListScreen.h" />
+    <ClInclude Include="clsCurrency.h" />
     <ClInclude Include="clsDate.h" />
     <ClInclude Include="clsDeleteScreen.h" />
     <ClInclude Include="clsDeleteUser.h" />

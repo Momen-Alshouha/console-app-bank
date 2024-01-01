@@ -153,6 +153,17 @@ void clsScreen::PrintUserRecord(clsUser& User) {
     cout << "| " << left << setw(12) << User.Permissions;
 }
 
+void clsScreen::_PrintCurrencyCard(clsCurrency Currency)
+{
+    cout << "\nCurrency Card:\n";
+    cout << "_____________________________\n";
+    cout << "\nCountry    : " << Currency.country;
+    cout << "\nCode       : " << Currency.currencyCode;
+    cout << "\nName       : " << Currency.currencyName;
+    cout << "\nRate(1$) = : " << Currency.rate;
+    cout << "\n_____________________________\n";
+}
+
 void clsScreen::_DrawScreenHeader(string Title, string SubTitle)
 {
     clsDate Date;

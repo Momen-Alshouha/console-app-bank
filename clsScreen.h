@@ -10,6 +10,8 @@
 #include "clsDate.h"
 #include "clsUser.h"
 #include "Global.h"
+#include "clsCurrency.h"
+
 using namespace std;
 
 class clsScreen
@@ -36,6 +38,8 @@ public:
 	static void PrintUserCard(clsUser& User);
 
 	static void PrintUserRecord(clsUser& User);
+
+	static void _PrintCurrencyCard(clsCurrency Currency);
 
 
 };
