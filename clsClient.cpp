@@ -1,11 +1,4 @@
 #include "clsClient.h"
-#include <vector>
-#include <string>
-#include <fstream>
-#include "clsString.h"
-
-const string clsClient::ClientFileName = "data/Clients.txt";
-
 
 string clsClient::_ConvertClientObjectToLine(clsClient Client,string Line, string Delimeter = "#//#")
 {

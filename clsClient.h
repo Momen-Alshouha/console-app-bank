@@ -2,14 +2,15 @@
 #include <vector>
 #include "clsPerson.h"
 #include "clsInputValidation.h"
+#include "Global.h"
+#include <fstream>
+#include "clsString.h"
 
 class clsClient : public clsPerson
 {
 	enum enMode { EmptyMode , UpdateMode , AddMode  };
 
 	enMode _Mode;
-	
-	const static string ClientFileName;
 
 	string _AccountNumber, _PinCode;
 	float _Balance;
