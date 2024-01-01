@@ -12,7 +12,22 @@ This repository contains a console-based banking application written in C++, emp
   - Create, Read, Update, Delete user data
   - Permission-based operations
   - User login and authentication
+  - Logging of user login activity
+  - Encrypt password in files
 
+## Additional Features
+
+- **Transfer Feature**:
+  - If has permission, Users can transfer funds between clients
+   
+- **Login Logs**:
+  - Records login activities for users
+  - Tracks login timestamps and user sessions
+  
+- **Transfer Logs**:
+  - Maintains a log of all fund transfer activities
+  - Contains details such as transfer amount, sender, receiver, and timestamps
+  
 ## Custom Libraries
 
 This repository includes five custom-built libraries implemented to enhance the functionalities of the banking application, designed to be versatile and usable in other C++ applications too:
@@ -34,29 +49,44 @@ The application includes an admin user with default credentials for testing purp
 
 Here are some screenshots from the application:
 
-- Login
+#### Login
 ![Login](screenshots/login.png)
 
-- Main Menu
+#### Invalid Login
+![Invalid Login](screenshots/invalid_login.png)
+
+#### Login Logs
+![Login](screenshots/login_logs_screen.png)
+
+#### Main Menu
 ![Main Menu](screenshots/main_menu_screen.png)
 
-- Manage Users Menu
+#### Manage Users Menu
 ![Manage Users Menu](screenshots/manage_users_screen.png)
 
-- List Users
+#### List Users
 ![List Users](screenshots/list_users_screen.png)
 
-- List Clients
+#### List Clients
 ![List Clients](screenshots/list_clients_screen.png)
 
-- Client Added Successfully
+#### Client Added Successfully
 ![Client Added Successfully](screenshots/add_client.png)
 
-- Access Denied
+#### Find Client
+![Client Added Successfully](screenshots/find_client_info.png)
+
+#### Delete Client
+![Client Added Successfully](screenshots/delete_client_screen.png)
+
+#### Access Denied
 ![Access Denied](screenshots/if_access_denied.png)
 
-- Invalid Login
-![Invalid Login](screenshots/invalid_login.png)
+#### Transactions Menu
+![Access Denied](screenshots/transactions_screen.png)
+
+#### Transfer Logs Menu
+![Access Denied](screenshots/transfer_logs_screen.png)
 
 ## Compile and Run the Code
 
