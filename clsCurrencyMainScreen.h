@@ -1,6 +1,8 @@
 #pragma once
 #include "clsScreen.h"
 #include "clsMainMenu.h"
+#include "clsListCurrenciesScreen.h"
+#include "clsFindCurrencyScreenr.h"
 
 class clsCurrencyMainScreen :public clsScreen {
     
@@ -14,11 +16,11 @@ class clsCurrencyMainScreen :public clsScreen {
     }
 
     static void _List() {
-        cout << "List" << endl;
+        clsListCurrenciesScreen::ListCurrencies();
     }
 
     static void _Find() {
-        cout << "Find" << endl;
+        clsFindCurrencyScreen::ShowFindCurrencyScreen();
     }
 
     static void _UpdateRate() {

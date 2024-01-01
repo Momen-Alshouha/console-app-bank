@@ -157,8 +157,10 @@
     <ClInclude Include="clsDeleteUser.h" />
     <ClInclude Include="clsDepositeScreen.h" />
     <ClInclude Include="clsFindClientScreen.h" />
+    <ClInclude Include="clsFindCurrencyScreenr.h" />
     <ClInclude Include="clsFindUserScreen.h" />
     <ClInclude Include="clsInputValidation.h" />
+    <ClInclude Include="clsListCurrenciesScreen.h" />
     <ClInclude Include="clsListUsersScreen.h" />
     <ClInclude Include="clsLoginLogs.h" />
     <ClInclude Include="clsLoginScreen.h" />

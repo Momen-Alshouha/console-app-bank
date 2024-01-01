@@ -182,7 +182,7 @@ public:
         CurrencyCode = clsString::UpperAllString(CurrencyCode);
 
         fstream MyFile;
-        MyFile.open("Currencies.txt", ios::in); // read Mode
+        MyFile.open(CurrenciesFilePath, ios::in); // read Mode
 
         if (MyFile.is_open())
         {
@@ -210,7 +210,7 @@ public:
         Country = clsString::UpperAllString(Country);
 
         fstream MyFile;
-        MyFile.open("Currencies.txt", ios::in); // read Mode
+        MyFile.open(CurrenciesFilePath, ios::in); // read Mode
 
         if (MyFile.is_open())
         {
