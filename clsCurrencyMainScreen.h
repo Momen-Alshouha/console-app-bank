@@ -3,6 +3,7 @@
 #include "clsMainMenu.h"
 #include "clsListCurrenciesScreen.h"
 #include "clsFindCurrencyScreenr.h"
+#include "clsUpdateCurrencyScreen.h"
 
 class clsCurrencyMainScreen :public clsScreen {
     
@@ -24,7 +25,7 @@ class clsCurrencyMainScreen :public clsScreen {
     }
 
     static void _UpdateRate() {
-        cout << "Update" << endl;
+        clsUpdateCurrencyScreen::ShowUpdateCurrencyScreen();
     }
 
     static void _CurrencyCalculator() {

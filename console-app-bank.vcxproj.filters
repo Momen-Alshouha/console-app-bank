@@ -170,6 +170,9 @@
     <ClInclude Include="clsFindCurrencyScreenr.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="clsUpdateCurrencyScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="console-app-bank.rc">
