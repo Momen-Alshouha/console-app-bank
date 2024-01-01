@@ -4,6 +4,7 @@
 #include "clsListCurrenciesScreen.h"
 #include "clsFindCurrencyScreenr.h"
 #include "clsUpdateCurrencyScreen.h"
+#include "clsCurrencyCoverterScreen.h"
 
 class clsCurrencyMainScreen :public clsScreen {
     
@@ -29,8 +30,7 @@ class clsCurrencyMainScreen :public clsScreen {
     }
 
     static void _CurrencyCalculator() {
-        cout << "Calculator" << endl;
-
+        clsCurrencyConverterScreen::ShowCurrencyConverterScreen();
     }
     static void _BackToCurrencyMainMenu() {
         cout << "\nPress any key to back to main menu...\n";

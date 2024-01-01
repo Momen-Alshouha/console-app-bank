@@ -245,6 +245,14 @@ public:
     {
         return _LoadCurrencysDataFromFile();
     }
+
+    /*float ConvertToUSD(float amount) {
+        return amount / this->rate;
+    }
+
+    float ConvertToElseThanUSD(float amount) {
+        
+    }*/
 };
 
 
