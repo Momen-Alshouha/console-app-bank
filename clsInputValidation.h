@@ -170,4 +170,21 @@ public:
 		cout <<endl;
 		return password;
 	}
+
+	template<typename T> T ReadTemplateVariable(T from =0, T to=0,T messageIfWrongRange="Wrong Range!") {
+		if (from==0&&to==0)
+		{
+			T var{};
+			cin >> var;
+		}
+		else if (to > from) {
+			T var{};
+			cin >> var;
+			while (var>to || var<from)
+			{
+				cout << messageIfWrongRange << endl;
+				cin >> var;
+			}
+		}
+	}
 };
