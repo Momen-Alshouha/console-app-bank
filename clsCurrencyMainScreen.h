@@ -74,7 +74,7 @@ public:
         cout << "\t[1] List Currencies.\n";
         cout << "\t[2] Find Currency.\n";
         cout << "\t[3] Update Rate.\n";
-        cout << "\t[4] Currency Calculator.\n";
+        cout << "\t[4] Currency Converter.\n";
         cout << "\t[5] Main Menu.\n";
         cout << "=================================================\n";
 
