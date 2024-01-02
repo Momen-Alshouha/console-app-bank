@@ -70,7 +70,7 @@ class clsCurrencyMainScreen :public clsScreen {
 public:
 	static void ShowCurrencyMainMenu() {
         system("cls");
-        _DrawScreenHeader("Main Screen");
+        _DrawScreenHeader("Currency Main Screen");
         cout << "\t[1] List Currencies.\n";
         cout << "\t[2] Find Currency.\n";
         cout << "\t[3] Update Rate.\n";

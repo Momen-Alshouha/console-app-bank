@@ -189,15 +189,15 @@ void clsMainMenu::ShowMainMenu()
 {
     system("cls");
     _DrawScreenHeader("Main Screen");
-    cout  << "\t[1] Show Client List.\n";
-    cout  << "\t[2] Add New Client.\n";
-    cout  << "\t[3] Delete Client.\n";
-    cout << "\t[4] Delete All Clients.\n";
-    cout  << "\t[5] Update Client Info.\n";
-    cout << "\t[6] Find Client.\n";
-    cout  << "\t[7] Transactions.\n";
-    cout << "\t[8] Manage Users.\n";
-    cout << "\t[9] Login Logs.\n";
+    cout  << "\t[1]  Show Client List.\n";
+    cout  << "\t[2]  Add New Client.\n";
+    cout  << "\t[3]  Delete Client.\n";
+    cout << "\t[4]  Delete All Clients.\n";
+    cout  << "\t[5]  Update Client Info.\n";
+    cout << "\t[6]  Find Client.\n";
+    cout  << "\t[7]  Transactions.\n";
+    cout << "\t[8]  Manage Users.\n";
+    cout << "\t[9]  Login Logs.\n";
     cout <<"\t[10] Currency Exchange.\n";
     cout << "\t[11] Logout.\n";
     cout << "=================================================\n";
