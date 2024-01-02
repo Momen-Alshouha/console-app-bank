@@ -15,19 +15,28 @@ This repository contains a console-based banking application written in C++, emp
   - Logging of user login activity
   - Encrypt password in files
 
-## Additional Features
+- **Additional Features**:
+  - **Transfer Feature**:
+    - If has permission, Users can transfer funds between clients
 
-- **Transfer Feature**:
-  - If has permission, Users can transfer funds between clients
-   
-- **Login Logs**:
-  - Records login activities for users
-  - Tracks login timestamps and user sessions
-  
-- **Transfer Logs**:
-  - Maintains a log of all fund transfer activities
-  - Contains details such as transfer amount, sender, receiver, and timestamps
-  
+  - **Login Logs**:
+    - Records login activities for users
+    - Tracks login timestamps and user sessions
+
+  - **Transfer Logs**:
+    - Maintains a log of all fund transfer activities
+    - Contains details such as transfer amount, sender, receiver, and timestamps
+
+  - **Currency Operations**:
+    - **List Currencies**:
+      - Provides a list of supported currencies for reference
+    - **Find Currency**:
+      - Allows users to search for specific currency information
+    - **Update Rate**:
+      - Updates currency exchange rates from a reliable source
+    - **Currency Converter**:
+      - Enables users to convert between different currencies based on the updated exchange rates
+
 ## Custom Libraries
 
 This repository includes five custom-built libraries implemented to enhance the functionalities of the banking application, designed to be versatile and usable in other C++ applications too:
@@ -87,6 +96,13 @@ Here are some screenshots from the application:
 
 #### Transfer Logs Menu
 ![Access Denied](screenshots/transfer_logs_screen.png)
+
+#### Curriencies Main Menu
+![Access Denied](screenshots/currency_main_screen.png)
+
+#### Curriencies Currencies List
+![Access Denied](screenshots/currencies_list_screen.png)
+
 
 ## Compile and Run the Code
 
