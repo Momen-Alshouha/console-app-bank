@@ -89,19 +89,19 @@ Here are some screenshots from the application:
 ![Client Added Successfully](screenshots/delete_client_screen.png)
 
 #### Access Denied
-![Access Denied](screenshots/if_access_denied.png)
+![if_access_denied](screenshots/if_access_denied.png)
 
 #### Transactions Menu
-![Access Denied](screenshots/transactions_screen.png)
+![transactions_screen](screenshots/transactions_screen.png)
 
 #### Transfer Logs Menu
-![Access Denied](screenshots/transfer_logs_screen.png)
+![transfer_logs_screen](screenshots/transfer_logs_screen.png)
 
 #### Curriencies Main Menu
-![Access Denied](screenshots/currency_main_screen.png)
+![currency_main_screen](screenshots/currency_main_screen.png)
 
-#### Curriencies Currencies List
-![Access Denied](screenshots/currencies_list_screen.png)
+#### Currencies List
+![currencies_list_screen](screenshots/currencies_list.png)
 
 
 ## Compile and Run the Code
